@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="397.8897637795276" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 397 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="397.8897637795276" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="397.8897637795276" height="192" rx="6" ry="6" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,92%); fill-rule: evenodd;"/>
+			<text x="12" y="172" style="font-family: SimHei; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,344) scale(1,-1)">图 23-1 发布目录与可写数据</text>
+			<rect x="13" y="117" width="204" height="39" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="141" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,282) scale(1,-1)">/opt/labapp/current</text>
+			<text x="21" y="126" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,252) scale(1,-1)">软链接，只指向当前版本</text>
+			<rect x="262" y="117" width="121" height="39" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="270" y="141" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,282) scale(1,-1)">releases/v1</text>
+			<text x="270" y="126" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,252) scale(1,-1)">root 管理</text>
+			<path d="M 217,137 L 262,137 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="262 137, 257.6121 139.3971, 257.6121 134.6029" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="13" y="32" width="370" height="58" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="75" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,150) scale(1,-1)">/var/lib/labapp</text>
+			<text x="21" y="41" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,82) scale(1,-1)">独立的数据目录，由 labapp 写入；不随 current 一起切换</text>
+		</g>
+	</g>
+</svg>

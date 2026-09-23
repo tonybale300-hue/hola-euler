@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="397.8897637795276" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 397 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="397.8897637795276" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="397.8897637795276" height="192" rx="6" ry="6" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,92%); fill-rule: evenodd;"/>
+			<text x="12" y="172" style="font-family: SimHei; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,344) scale(1,-1)">图 4-2 名称与文件对象</text>
+			<rect x="13" y="123" width="100" height="28" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="136" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,272) scale(1,-1)">original.txt</text>
+			<rect x="13" y="78" width="100" height="28" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="91" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,182) scale(1,-1)">hard.txt</text>
+			<rect x="162" y="111" width="88" height="37" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="170" y="133" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,266) scale(1,-1)">同一 inode</text>
+			<rect x="288" y="111" width="95" height="37" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="296" y="133" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,266) scale(1,-1)">文件内容</text>
+			<path d="M 113,136 L 162,134 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="162 134, 157.7135 136.5741, 157.518 131.7838" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<path d="M 113,92 L 162,123 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="162 123, 157.0103 122.6798, 159.5735 118.6283" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<path d="M 250,129 L 288,129 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="288 129, 283.6121 131.3971, 283.6121 126.6029" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="13" y="20" width="100" height="31" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="36" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,72) scale(1,-1)">soft.txt</text>
+			<rect x="162" y="17" width="221" height="39" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="170" y="41" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,82) scale(1,-1)">保存路径 original.txt</text>
+			<text x="170" y="26" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,52) scale(1,-1)">解析这个路径，再到达文件对象</text>
+			<path d="M 113,35 L 162,35 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="162 35, 157.6121 37.39713, 157.6121 32.60287" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

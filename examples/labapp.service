@@ -1,0 +1,23 @@
+[Unit]
+Description=Hola Euler teaching application
+After=network.target
+
+[Service]
+Type=simple
+User=labapp
+Group=labapp
+WorkingDirectory=/opt/labapp/current
+ExecStart=/usr/bin/java -jar /opt/labapp/current/app.jar
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+UMask=0027
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

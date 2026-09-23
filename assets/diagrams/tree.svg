@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="397.8897637795276" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 397 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="397.8897637795276" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="397.8897637795276" height="192" rx="6" ry="6" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,92%); fill-rule: evenodd;"/>
+			<text x="12" y="172" style="font-family: SimHei; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,344) scale(1,-1)">图 3-1 从根目录展开</text>
+			<rect x="164" y="128" width="65" height="28" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="172" y="141" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,282) scale(1,-1)">/</text>
+			<path d="M 197,128 L 53,108 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="53 108, 57.67596 106.2293, 57.01642 110.978" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="14" y="79" width="78" height="29" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="22" y="93" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,186) scale(1,-1)">/home</text>
+			<path d="M 197,128 L 149,108 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="149 108, 153.9724 107.4749, 152.1284 111.9004" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="110" y="79" width="78" height="29" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="118" y="93" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,186) scale(1,-1)">/etc</text>
+			<path d="M 197,128 L 245,108 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="245 108, 241.8716 111.9004, 240.0276 107.4749" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="206" y="79" width="78" height="29" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="214" y="93" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,186) scale(1,-1)">/var</text>
+			<path d="M 197,128 L 341,108 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="341 108, 336.9836 110.978, 336.324 106.2293" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="302" y="79" width="78" height="29" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="310" y="93" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,186) scale(1,-1)">/usr</text>
+			<path d="M 53,79 L 90,58 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="90 58, 87.36713 62.25065, 85.00066 58.08115" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<rect x="14" y="16" width="228" height="42" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="22" y="43" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,86) scale(1,-1)">/home/alex/linux-lab</text>
+			<text x="22" y="25" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,50) scale(1,-1)">个人实验目录从 /home 分支向下展开</text>
+		</g>
+	</g>
+</svg>

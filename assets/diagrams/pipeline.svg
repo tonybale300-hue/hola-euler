@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="397.8897637795276" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 397 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="397.8897637795276" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="397.8897637795276" height="192" rx="6" ry="6" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,92%); fill-rule: evenodd;"/>
+			<text x="12" y="172" style="font-family: SimHei; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,344) scale(1,-1)">图 17-2 排序与统计的管道</text>
+			<rect x="13" y="71" width="105" height="63" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="21" y="119" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,238) scale(1,-1)">printf</text>
+			<text x="21" y="80" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,160) scale(1,-1)">产生文本</text>
+			<rect x="146" y="71" width="105" height="63" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="154" y="119" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,238) scale(1,-1)">sort</text>
+			<text x="154" y="80" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,160) scale(1,-1)">排序</text>
+			<rect x="279" y="71" width="105" height="63" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="287" y="119" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,238) scale(1,-1)">uniq -c</text>
+			<text x="287" y="80" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,160) scale(1,-1)">相邻计数</text>
+			<path d="M 118,102 L 146,102 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="146 102, 141.6121 104.3971, 141.6121 99.60287" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<path d="M 251,102 L 279,102 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="279 102, 274.6121 104.3971, 274.6121 99.60287" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<text x="16" y="39" style="font-family: SimSun; font-size: 9px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,78) scale(1,-1)">箭头连接前一程序的 stdout 与后一程序的 stdin。</text>
+			<text x="16" y="21" style="font-family: SimSun; font-size: 9px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,42) scale(1,-1)">普通管道不会自动把 stderr 合并进来。</text>
+		</g>
+	</g>
+</svg>

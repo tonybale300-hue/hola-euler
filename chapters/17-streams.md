@@ -18,7 +18,7 @@ printf '%s\n' second >> result.txt
 cat result.txt
 ```
 
-> 把标准输出指向文件，通常会创建文件或截断已有内容；>> 追加。两次执行后应看到 first 和 second 两行。重定向由 Shell 在启动命令前安排，因此 sort data.txt > data.txt 可能先截断输入。正确做法是输出到另一个文件，检查成功后再明确替换。
+符号 > 把标准输出指向文件，通常会创建文件或截断已有内容；>> 追加。两次执行后应看到 first 和 second 两行。重定向由 Shell 在启动命令前安排，因此 sort data.txt > data.txt 可能先截断输入。正确做法是输出到另一个文件，检查成功后再明确替换。
 
 ## 17.2 把错误单独保留
 
