@@ -15,6 +15,7 @@ public class LabServer {
             String text;
             if (!exchange.getRequestMethod().equals("GET")) {
                 status = 405;
+                exchange.getResponseHeaders().set("Allow", "GET");
                 text = "method not allowed\n";
             } else if (path.equals("/health")) {
                 text = "ok\n";
@@ -27,9 +28,14 @@ public class LabServer {
             byte[] body = text.getBytes(StandardCharsets.UTF_8);
             exchange.getResponseHeaders().set(
                 "Content-Type", "text/plain; charset=utf-8");
-            exchange.sendResponseHeaders(status, body.length);
-            try (var output = exchange.getResponseBody()) {
-                output.write(body);
+            if (exchange.getRequestMethod().equals("HEAD")) {
+                exchange.sendResponseHeaders(status, -1);
+                exchange.close();
+            } else {
+                exchange.sendResponseHeaders(status, body.length);
+                try (var output = exchange.getResponseBody()) {
+                    output.write(body);
+                }
             }
             System.out.println(status + " " + path);
         });

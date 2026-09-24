@@ -1,5 +1,7 @@
 # 第 12 章 Linux 网络基础
 
+> 本章任务｜根据地址、路由、名称和端口逐步收窄网络问题。
+
 ## 12.1 为什么程序说连不上
 
 ### 12.1.1 先把四个对象分开
@@ -8,7 +10,7 @@
 
 IPv4 地址如 192.168.56.10，/24 是网络前缀长度，表示前 24 位属于网络前缀。这里的地址仅用于说明，实验应替换成自己虚拟机实际获得的地址。127.0.0.1 是本机回环地址，从另一台电脑访问它，连接的是那台电脑自己。
 
-:::diagram network
+![图 12-1 一次请求经过的对象](../assets/diagrams/network.svg)
 
 ### 12.1.2 逐层观察
 
@@ -38,12 +40,13 @@ getent hosts 通过系统名称服务查询地址。ping 是发送回显请求�
 
 ```bash
 ss -ltn
-curl -I --connect-timeout 5 https://www.openeuler.org/
+curl -I --connect-timeout 5 --max-time 15 \
+  https://www.openeuler.org/
 ```
 
 ss 可与 socket statistics 关联，用于查看套接字信息。套接字是程序进行网络通信使用的接口对象。-l 查看监听，-t 选择 TCP，-n 用数字显示地址端口。TCP 是提供可靠字节流传输的协议，HTTP 是常用于网页和接口请求的应用协议。
 
-curl 是数据传输工具，名称可按项目的 client URL 关联记忆。-I 请求 HTTP 响应头，--connect-timeout 限制建立连接阶段的等待时间。证书错误需要检查系统时间、可信证书与访问目标，不能用 -k 作为常态解决方案。离线环境无法访问外部网站时，仍可在第 22 章用本机服务练习。
+curl 是数据传输工具，名称可按项目的 client URL 关联记忆。-I 请求 HTTP 响应头，--connect-timeout 限制建立连接阶段的等待时间，--max-time 15 把整个请求限制为 15 秒。证书错误需要检查系统时间、可信证书与访问目标，不能用 -k 作为常态解决方案。离线环境无法访问外部网站时，仍可在第 22 章用本机服务练习。
 
 ## 12.3 NetworkManager 的配置与状态
 
@@ -70,4 +73,4 @@ NetworkManager 的 connection 是一组保存的网络设置，device 是实际�
 
 本章新命令为 ip / Internet Protocol 工具、nmcli / NetworkManager CLI、ping / 回显诊断、ss / socket statistics、curl / client URL。复用 getent 查询，明天从“哪一层失败”重新排查一次。
 
-资料依据见 S11、S12、S13。答案见第 12 章答案。
+资料依据见 S11、S12、S13、S27。答案见第 12 章答案。

@@ -1,0 +1,72 @@
+{
+  "version": "v0.2.0",
+  "chapters": 25,
+  "exercises": 150,
+  "code_blocks": 114,
+  "languages": {
+    "bash": 103,
+    "text": 4,
+    "vim": 1,
+    "ini": 2,
+    "java": 2,
+    "xml": 1,
+    "properties": 1
+  },
+  "bash_syntax_pass": 103,
+  "synchronized_examples": 8,
+  "mock_tests": [
+    {
+      "script": "check-health.sh",
+      "case": 0,
+      "exit": 0
+    },
+    {
+      "script": "check-health.sh",
+      "case": 1,
+      "exit": 1
+    },
+    {
+      "script": "check-health.sh",
+      "case": 2,
+      "exit": 1
+    },
+    {
+      "script": "check-health.sh",
+      "case": 3,
+      "exit": 1
+    },
+    {
+      "script": "wait-ready.sh",
+      "case": 0,
+      "exit": 0
+    },
+    {
+      "script": "wait-ready.sh",
+      "case": 1,
+      "exit": 1
+    },
+    {
+      "script": "wait-ready.sh",
+      "case": 2,
+      "exit": 1
+    },
+    {
+      "script": "wait-ready.sh",
+      "case": 3,
+      "exit": 1
+    },
+    {
+      "script": "wait-ready.sh",
+      "case": "missing argument",
+      "exit": 2
+    }
+  ],
+  "epub": {
+    "entries": 61,
+    "xml_documents": 58,
+    "manifest_resources": 58,
+    "checks": "ZIP, XML, manifest, spine, local links and fragments"
+  },
+  "openEuler_runtime": "pending authentication / not executed",
+  "java_runtime": "not executed in this revision"
+}

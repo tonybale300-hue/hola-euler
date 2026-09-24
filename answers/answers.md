@@ -42,7 +42,7 @@
 
 1. 不会，touch 主要更新时间戳，目标不存在时才常用于创建空文件。
 2. -r 或 --recursive。
-3. 确保 hello.txt 和 archive 存在，再 cp hello.txt hello.bak，mv hello.bak archive/。
+3. 回到 ~/linux-lab/files，确认 original.txt 和 archive 存在，再 cp original.txt original.bak，mv original.bak archive/。若已完成删除链接目标的扩展实验，先重新创建一份 original.txt。
 4. 两个名字关联同一文件对象，内容变化会从另一名字观察到。
 5. 不合适。先列出目录内容，按需逐项处理自己的实验文件，再用 rmdir 删除空目录。
 6. 验收应能指出源、副本与移动后的路径。删除前 pwd 和 ls 检查，只删除选中的副本；内容相同可用后续学到的 cmp 检查。

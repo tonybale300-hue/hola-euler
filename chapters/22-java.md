@@ -1,5 +1,7 @@
 # 第 22 章 Java 与 Linux
 
+> 本章任务｜从源文件生成 JAR，验证接口后正常停止服务。
+
 ## 22.1 先准备完整的 JDK
 
 ### 22.1.1 确认运行与编译能力
@@ -29,7 +31,15 @@ javac 关联 Java compiler，jar 关联 Java archive。java 与 javac 应属于�
 
 ### 22.2.1 完整程序 LabServer.java
 
-建立 ~/linux-lab/java-app，使用 Vim 保存以下源文件。程序只监听本机回环地址，提供 /health 与 / 两个 GET 接口，不依赖外部 Java 库。它是教学程序，不承担公网生产流量。
+先建立目录，再在编辑器中保存完整源文件。
+
+```bash
+mkdir -p ~/linux-lab/java-app
+cd ~/linux-lab/java-app
+vim LabServer.java
+```
+
+程序只监听本机回环地址，提供 /health 与 / 两个 GET 接口，不依赖外部 Java 库。它是教学程序，不承担公网生产流量。
 
 ```java
 import com.sun.net.httpserver.HttpServer;
@@ -49,6 +59,7 @@ public class LabServer {
             String text;
             if (!exchange.getRequestMethod().equals("GET")) {
                 status = 405;
+                exchange.getResponseHeaders().set("Allow", "GET");
                 text = "method not allowed\n";
             } else if (path.equals("/health")) {
                 text = "ok\n";
@@ -61,9 +72,14 @@ public class LabServer {
             byte[] body = text.getBytes(StandardCharsets.UTF_8);
             exchange.getResponseHeaders().set(
                 "Content-Type", "text/plain; charset=utf-8");
-            exchange.sendResponseHeaders(status, body.length);
-            try (var output = exchange.getResponseBody()) {
-                output.write(body);
+            if (exchange.getRequestMethod().equals("HEAD")) {
+                exchange.sendResponseHeaders(status, -1);
+                exchange.close();
+            } else {
+                exchange.sendResponseHeaders(status, body.length);
+                try (var output = exchange.getResponseBody()) {
+                    output.write(body);
+                }
             }
             System.out.println(status + " " + path);
         });
@@ -75,7 +91,7 @@ public class LabServer {
 }
 ```
 
-HttpServer 是 JDK 的轻量 HTTP API。InetSocketAddress 指定监听地址与端口。收到请求后，程序检查方法和路径，写回状态码与正文。200 表示这次请求成功，404 表示找不到路径，405 表示不接受该方法。字符先编码成 UTF-8 字节，再把字节长度交给响应接口，避免把中文字符数误作字节数。关闭钩子在正常终止流程中停止服务，不能承诺在强制 KILL 下仍执行。
+HttpServer 是 JDK 的轻量 HTTP API。InetSocketAddress 指定监听地址与端口。收到请求后，程序检查方法和路径，写回状态码与正文。200 表示这次请求成功，404 表示找不到路径，405 表示不接受该方法，并通过 Allow 说明支持 GET。即使拒绝 HEAD，也不发送响应正文。字符先编码成 UTF-8 字节，再把字节长度交给响应接口，避免把中文字符数误作字节数。关闭钩子在正常终止流程中停止服务，不能承诺在强制 KILL 下仍执行。
 
 ### 22.2.2 编译、打包、前台运行
 
@@ -104,7 +120,16 @@ ss -ltn
 
 Spring Boot 可以组织 Web 应用及其依赖。本书固定 3.5.16 作为另一条练习路径，官方该版本文档要求至少 Java 17，JDK 21 在其声明的兼容范围内；Maven 至少 3.6.3。[S21] 这是刻意固定的教学版本，后续安全维护仍要重新核对版本支持情况。
 
-在 ~/linux-lab/spring-lab 中建立 pom.xml。POM 是 Project Object Model，描述项目坐标、依赖与构建。下面完整配置也随 examples/spring-lab 提供。
+先建立独立项目及其源码、资源目录，再创建 pom.xml。
+
+```bash
+mkdir -p ~/linux-lab/spring-lab/src/main/java/book/alex
+mkdir -p ~/linux-lab/spring-lab/src/main/resources
+cd ~/linux-lab/spring-lab
+vim pom.xml
+```
+
+POM 是 Project Object Model，描述项目坐标、依赖与构建。下面完整配置也随 examples/spring-lab 提供。
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0">
@@ -176,6 +201,7 @@ server.port=8080
 通过 dnf search maven 与 dnf info maven 确认包和版本，再按第 9 章安装。mvn 是 Maven 的命令名。运行 mvn -version 检查它实际使用的 Java。首次构建需要从配置的依赖仓库下载内容，失败时分别检查仓库、代理和证书，不能把它误判为 Linux 文件权限问题。
 
 ```bash
+cd ~/linux-lab/spring-lab
 mvn -version
 mvn package
 java -jar target/spring-lab-1.0.0.jar
@@ -196,4 +222,4 @@ java -jar target/spring-lab-1.0.0.jar
 
 本章新命令为 java / Java 启动器、javac / Java compiler、jar / Java archive、mvn / Maven。复用 ss、curl、sha256sum，三天后从空构建目录重新生成产物。
 
-资料依据见 S20、S21、S22。答案见第 22 章答案。
+资料依据见 S20、S21、S22、S29。答案见第 22 章答案。

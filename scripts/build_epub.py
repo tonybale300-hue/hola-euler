@@ -38,8 +38,9 @@ def render(text):
         if match:
             level=len(match[1]);key='h'+str(len(heads)+1);heads.append((level,match[2],key))
             out.append(f'<h{level} id="{key}">{inline(match[2])}</h{level}>');i+=1;continue
-        if line.startswith(':::diagram '):
-            key=line.split()[-1];images.add(key)
+        figure=re.fullmatch(r'!\[[^\]]*\]\(\.\./assets/diagrams/([\w-]+)\.svg\)',line)
+        if line.startswith(':::diagram ') or figure:
+            key=figure[1] if figure else line.split()[-1];images.add(key)
             # SVG is an EPUB core media type. Text alternative survives image suppression.
             alt=diagram_caption(key)
             out.append(f'<figure><img src="images/{key}.svg" alt="{html.escape(alt,quote=True)}"/><figcaption>{inline(alt)}</figcaption></figure>');i+=1;continue

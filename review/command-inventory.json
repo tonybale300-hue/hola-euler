@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "00-01",
+    "file": "chapters/00-preface.md",
+    "line": 19,
+    "language": "bash",
+    "sha256": "552371cb12ea28e3b4774e528184266dc0334afc7356180e5e00c842a1bd45bb",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "00-02",
+    "file": "chapters/00-preface.md",
+    "line": 33,
+    "language": "text",
+    "sha256": "d07bc4f7cd210ea6fe33cbf8c0fd1c4eae56eeece52cf2462f0f90a1cf386541",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "00-03",
+    "file": "chapters/00-preface.md",
+    "line": 43,
+    "language": "text",
+    "sha256": "fda92fbbef64cad37b65d5eb2fde0143766e6ff3b688d9bdf8ada858e3b0f917",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "01-01",
+    "file": "chapters/01-linux-openeuler.md",
+    "line": 45,
+    "language": "bash",
+    "sha256": "8752bad16f765386378637ec7db9d1937a560eaff9077856274127a0e2ffba59",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "02-01",
+    "file": "chapters/02-terminal-shell-bash.md",
+    "line": 17,
+    "language": "bash",
+    "sha256": "cf0613a58db7fe26b439eaf603710614fed0946208522a04124cddc7c656d177",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "02-02",
+    "file": "chapters/02-terminal-shell-bash.md",
+    "line": 29,
+    "language": "bash",
+    "sha256": "695cb9a6362bfbf04998616abc8f14a0510bc5835adb05482f3c6d9a82424a7f",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "02-03",
+    "file": "chapters/02-terminal-shell-bash.md",
+    "line": 41,
+    "language": "bash",
+    "sha256": "ebc20ba8f43e1c03ce77aba35838adabf66dfe57acc06ca65c17e484bbd8e75a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "02-04",
+    "file": "chapters/02-terminal-shell-bash.md",
+    "line": 59,
+    "language": "bash",
+    "sha256": "b75aff4a90bba595d0b281528d78cd09a6d877d170579060703142e2d241caf6",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "03-01",
+    "file": "chapters/03-paths.md",
+    "line": 17,
+    "language": "bash",
+    "sha256": "2324a3c319cb9513a9f2dbf7bfc4b85da918fcb9b79a13a4db7f9810d2461b23",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "03-02",
+    "file": "chapters/03-paths.md",
+    "line": 34,
+    "language": "bash",
+    "sha256": "6d96499f2da5a9bacab579ff70732bae6e8f9f504124e516c362e8d765d28f63",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "03-03",
+    "file": "chapters/03-paths.md",
+    "line": 50,
+    "language": "bash",
+    "sha256": "2cb9285ece376b7a5cac25e9ae5a5ce5b5c0022cbc49910a36a3d6185a669a0e",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "03-04",
+    "file": "chapters/03-paths.md",
+    "line": 62,
+    "language": "bash",
+    "sha256": "62aa2296b75223c5e44100591f0553b4d99bab1c67bc82500c75344274caf3a0",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-01",
+    "file": "chapters/04-files.md",
+    "line": 9,
+    "language": "bash",
+    "sha256": "0860fd113b8b1f425b6ef019663823df589ff23ecae7da87eb7ae3d97d889f3d",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-02",
+    "file": "chapters/04-files.md",
+    "line": 22,
+    "language": "bash",
+    "sha256": "464c4727525cf84388ed07843c6d8ea2df5fb34fc2f40d30fedfdb28e3815b2a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-03",
+    "file": "chapters/04-files.md",
+    "line": 35,
+    "language": "bash",
+    "sha256": "14a58133c8b9f1c6c1707f608fbedcad33b3e6cf9217f28907cd44594def8173",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-04",
+    "file": "chapters/04-files.md",
+    "line": 46,
+    "language": "bash",
+    "sha256": "7fafeb12b4b393e8e8c48f183c3a1b356c597730dd5f9de1f41e38dda1478f16",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-05",
+    "file": "chapters/04-files.md",
+    "line": 57,
+    "language": "bash",
+    "sha256": "2f266efbfda9e0d7fc2a0bf9e9d92441334527f6f41b8ff1a1dcddd4f81b1bf8",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "04-06",
+    "file": "chapters/04-files.md",
+    "line": 69,
+    "language": "bash",
+    "sha256": "d75e5ee43f7d7a28c91a4699b4de1b546af10c862b1fad28a9799d4152f79837",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-01",
+    "file": "chapters/05-text.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "035f7c82b2705ec618f4ebb3d6221d8ef60a2430bc188d8dc13422fe0e428c98",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-02",
+    "file": "chapters/05-text.md",
+    "line": 23,
+    "language": "bash",
+    "sha256": "553af41d8fd79dc55d5dcbfde7c372fdce6a267423ebd5392e0ea4bb2f2a6713",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-03",
+    "file": "chapters/05-text.md",
+    "line": 33,
+    "language": "bash",
+    "sha256": "e3eb7247b4c3d43b4ecbfad4b56d4d53d0c630b7be12ec0e925bf07ec27bb669",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-04",
+    "file": "chapters/05-text.md",
+    "line": 45,
+    "language": "bash",
+    "sha256": "68850cb36e1badc50d682fe9c6a41596b2a8502e6c60181d44fa81e999577d09",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-05",
+    "file": "chapters/05-text.md",
+    "line": 55,
+    "language": "bash",
+    "sha256": "ce3e704a2ebbeba0946973d8a3992d984d74f87f9f70c957f79727f657322f54",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "05-06",
+    "file": "chapters/05-text.md",
+    "line": 66,
+    "language": "bash",
+    "sha256": "18d5c1839e51340e84c1fc00309a1d4ecbc4f137d004789094e27398da623d41",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "06-01",
+    "file": "chapters/06-vim.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "869fe9d57fde4807d8ce3938b32f52e637cdf6f328be9b49ca43d64010ba68aa",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "06-02",
+    "file": "chapters/06-vim.md",
+    "line": 41,
+    "language": "vim",
+    "sha256": "3a4ebe3cdfa7a0f7a83cc3349cd6f157affbf600dfa7213232ae61da2edd33cc",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "07-01",
+    "file": "chapters/07-users.md",
+    "line": 9,
+    "language": "bash",
+    "sha256": "89621672bb2b2a62ba4bf827d29e1b838ca329895eb2c0d1869dd546fd634849",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "07-02",
+    "file": "chapters/07-users.md",
+    "line": 22,
+    "language": "bash",
+    "sha256": "a89396d0cd73f999eb1a36b0730b1ce8ab357d1198e35c89bc14e2cb4d561f01",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "07-03",
+    "file": "chapters/07-users.md",
+    "line": 33,
+    "language": "bash",
+    "sha256": "9d443f745a64e51cc8383c23a423dfb81b6fb80b672b9a662ad370692e96dfd3",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "07-04",
+    "file": "chapters/07-users.md",
+    "line": 53,
+    "language": "bash",
+    "sha256": "393ca4bdd7451df0a45866254286b9c99701f4275c9f2263d82df97c81a59e83",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "07-05",
+    "file": "chapters/07-users.md",
+    "line": 65,
+    "language": "bash",
+    "sha256": "e384f627c586b214454ead99a6af702e07362599d93dc04e39d31bb9dcc4a9bb",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "08-01",
+    "file": "chapters/08-permissions.md",
+    "line": 9,
+    "language": "bash",
+    "sha256": "401b3d863de5a312dc00bda0bbc3b37445f8b5932453e8ebeaee3ae9ebf7cee2",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "08-02",
+    "file": "chapters/08-permissions.md",
+    "line": 37,
+    "language": "bash",
+    "sha256": "d39118b28db36163c2034ee52c7f8a2ad07e2b0347ac00238532f17f912074c7",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "08-03",
+    "file": "chapters/08-permissions.md",
+    "line": 58,
+    "language": "bash",
+    "sha256": "7417f3919c25b2d9c594ebc402175334b025981124eb201dca66a0e30f605eb8",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "09-01",
+    "file": "chapters/09-packages.md",
+    "line": 15,
+    "language": "bash",
+    "sha256": "17ede6f185ebe610171f0db0ed580f0002f79c249f7eb7c3a6d0b250adc9b5f0",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "09-02",
+    "file": "chapters/09-packages.md",
+    "line": 30,
+    "language": "bash",
+    "sha256": "63ea240e643b508d00c45f0f0558f8b096c6fe70feb19b2c46ed26123c2f1afa",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "09-03",
+    "file": "chapters/09-packages.md",
+    "line": 41,
+    "language": "bash",
+    "sha256": "2cc31de23672aa1fe202d6f7a2303a02074c4e5235ff2432dd5543c3f889b016",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "10-01",
+    "file": "chapters/10-processes.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "afe079a78209d722c18539482697c8d79e90964d09dc9ee792460b36d120baef",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "10-02",
+    "file": "chapters/10-processes.md",
+    "line": 30,
+    "language": "bash",
+    "sha256": "5d9a17cb70b9733aadc073a44c21889d33325874c51f9c0c461de3e61a2425eb",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "10-03",
+    "file": "chapters/10-processes.md",
+    "line": 42,
+    "language": "bash",
+    "sha256": "684b91f2c59944c671b475342b94a86866fef501f7916a4412b82f0d3bbe6655",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "11-01",
+    "file": "chapters/11-systemd.md",
+    "line": 17,
+    "language": "bash",
+    "sha256": "6bc6887ef27c0041c53b7fc5be56b747b5ec85c76fd03234d694383aef77fd27",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "11-02",
+    "file": "chapters/11-systemd.md",
+    "line": 35,
+    "language": "bash",
+    "sha256": "27d3fd9e1a5bf31bfff9f3718a57feb9035df15e7f890955fbcca5c4898ae26b",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "11-03",
+    "file": "chapters/11-systemd.md",
+    "line": 47,
+    "language": "ini",
+    "sha256": "72b47ac2bd564bbe12e5d83d894fd26cd192d97e549d0ef610b7bf81a742e76d",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "12-01",
+    "file": "chapters/12-network.md",
+    "line": 17,
+    "language": "bash",
+    "sha256": "4625e5b59a3f88f8eac79726dcca837107dd5c52caaa9c4be4e44398ec979319",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "12-02",
+    "file": "chapters/12-network.md",
+    "line": 32,
+    "language": "bash",
+    "sha256": "c14294182bb0a9e20ed7bbf595a7567a52b5a004084ca314816a55e6b83bb532",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "12-03",
+    "file": "chapters/12-network.md",
+    "line": 41,
+    "language": "bash",
+    "sha256": "44fb4985d7e32105e1d4ce5177298e4a523db81e8b83844da307145ffd2c2125",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-01",
+    "file": "chapters/13-ssh.md",
+    "line": 13,
+    "language": "bash",
+    "sha256": "f41686b2a4262e070ec2f706d418106f47a0ee864ec059334f064e93c69d1d06",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-02",
+    "file": "chapters/13-ssh.md",
+    "line": 25,
+    "language": "bash",
+    "sha256": "7ed3d5f9d2eabe5da157c19ae8629c5970280533a4b88308a9c9ee676717f739",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-03",
+    "file": "chapters/13-ssh.md",
+    "line": 35,
+    "language": "bash",
+    "sha256": "4f47f2b98ee19657603fe9c71ddc909631cde0f408fefd74efda51bd960a84d7",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-04",
+    "file": "chapters/13-ssh.md",
+    "line": 47,
+    "language": "bash",
+    "sha256": "af58a0dbdbbe8e068dedb77708b3b0b117603c7743f556ba496bc803f977e9fb",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-05",
+    "file": "chapters/13-ssh.md",
+    "line": 62,
+    "language": "bash",
+    "sha256": "1f7b1348973bad591744b29b0c8e7b1824791c01b9fe73ba74723acbf16fd7c1",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "13-06",
+    "file": "chapters/13-ssh.md",
+    "line": 72,
+    "language": "bash",
+    "sha256": "40f3e150b1ec7791f4faca187e5f19d2833c3c1ad274b585bab1fe975e22c9ae",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "14-01",
+    "file": "chapters/14-archives.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "5d3d27ab08fb0a7b8e74a1e0f1d7aa090fc8fe1c1577b758ded0ced7b3aaf103",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "14-02",
+    "file": "chapters/14-archives.md",
+    "line": 26,
+    "language": "bash",
+    "sha256": "25fb2725f0fbcc8f3e0e21a1dadb5053982363b0c349f3cb568ce61fcc71979a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "14-03",
+    "file": "chapters/14-archives.md",
+    "line": 45,
+    "language": "bash",
+    "sha256": "a1f78210c198451674e8c8c14120b8fc6e1b6ba5e019d86191b4074a0b8dfb92",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "15-01",
+    "file": "chapters/15-storage.md",
+    "line": 15,
+    "language": "bash",
+    "sha256": "762b07463bb3f8fb40a25f3a01aac3075ce27085f792e409a4606faf06a106d5",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "15-02",
+    "file": "chapters/15-storage.md",
+    "line": 32,
+    "language": "bash",
+    "sha256": "068783aac8e80aab0c3b18a5144bbe228c491b7b08a520cdae1433109150c987",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "15-03",
+    "file": "chapters/15-storage.md",
+    "line": 48,
+    "language": "bash",
+    "sha256": "29cb8ff33374d9f12cb59f37ce9e07c080641aa4c793f6e62bcd6f144b3d1e14",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "15-04",
+    "file": "chapters/15-storage.md",
+    "line": 56,
+    "language": "bash",
+    "sha256": "377e995622614c764878bf3a16a5a8e0e3a6d71146c82233ae8fbe5487564778",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "16-01",
+    "file": "chapters/16-environment.md",
+    "line": 9,
+    "language": "bash",
+    "sha256": "6af82dfb1ec8395cd05c5d7e39d63b3d31a08db1258dc3c9e714f567519d9723",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "16-02",
+    "file": "chapters/16-environment.md",
+    "line": 19,
+    "language": "bash",
+    "sha256": "0468150edd9dff3aaa300ba7fd1d4d3701d9e5d07fddfee7d50d233357183461",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "16-03",
+    "file": "chapters/16-environment.md",
+    "line": 31,
+    "language": "bash",
+    "sha256": "9b4f74d923dbc0661b07519925b58efc60fbd09f5ea213634110414e5216a026",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "16-04",
+    "file": "chapters/16-environment.md",
+    "line": 45,
+    "language": "bash",
+    "sha256": "5225149b4e85e0dda0802244e82a6d7a6e8e3ffbb5c9f82fee5da224ea82ab06",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-01",
+    "file": "chapters/17-streams.md",
+    "line": 15,
+    "language": "bash",
+    "sha256": "886eb804cbee034be6d309daf3475d26c4afcb4d12cb73c7022927970490759a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-02",
+    "file": "chapters/17-streams.md",
+    "line": 29,
+    "language": "bash",
+    "sha256": "0744c180cdb60b78cd0e141181d760da4ea15fbfd3aa4c01608826f82619ea14",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-03",
+    "file": "chapters/17-streams.md",
+    "line": 39,
+    "language": "bash",
+    "sha256": "cde35cefb9fdae4ee53efe1cd7a0d54a5cb86fffe61c67d06a21e7529bba89c2",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-04",
+    "file": "chapters/17-streams.md",
+    "line": 53,
+    "language": "bash",
+    "sha256": "428d88a9f78e40bdc581d381e8c36ff16fc4d85e47528c6387ccd6042fb7a8d9",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-05",
+    "file": "chapters/17-streams.md",
+    "line": 63,
+    "language": "bash",
+    "sha256": "6cf304c51280e05eca72a1db6583addcad05b2338ee9011d1bfefab763d97d4e",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "17-06",
+    "file": "chapters/17-streams.md",
+    "line": 73,
+    "language": "bash",
+    "sha256": "428b51d6a5b88dbbe8181aee1d649ea5152fd9ff58cf8eabfbbad9f8a032b46e",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "18-01",
+    "file": "chapters/18-search.md",
+    "line": 9,
+    "language": "bash",
+    "sha256": "2fbd582ab9167f6a945e5757fbcd24744751c449190fced774cbbe78037df37c",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "18-02",
+    "file": "chapters/18-search.md",
+    "line": 23,
+    "language": "bash",
+    "sha256": "e89c653338688a7b2318907c0549bb76ebb8ce15d9b797c09ab45b79cc4fc4a9",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "18-03",
+    "file": "chapters/18-search.md",
+    "line": 33,
+    "language": "bash",
+    "sha256": "088f215ddd9e8c2e45c744c2581c00cecee7a88455728164e86fe43e09667cd0",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "18-04",
+    "file": "chapters/18-search.md",
+    "line": 39,
+    "language": "text",
+    "sha256": "4e250f3666ea70512865a10f37399975e1e967e88a3e299909c79ee4920a1a8e",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "18-05",
+    "file": "chapters/18-search.md",
+    "line": 56,
+    "language": "bash",
+    "sha256": "daa36ca2bbe43f8e79d0f71bdbaacfe854fa4d89093b15d419158e00e0c7dfe7",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-01",
+    "file": "chapters/19-scripts.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "8879952d7110447adc738a288b83e35c8cc957bcce43e555a78c50d8c193df8f",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-02",
+    "file": "chapters/19-scripts.md",
+    "line": 19,
+    "language": "bash",
+    "sha256": "0dedeef65bc14081de7f5f3bca86ad2ae1a8bd4b11764fb84dd96b20d4e03b5c",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-03",
+    "file": "chapters/19-scripts.md",
+    "line": 28,
+    "language": "bash",
+    "sha256": "a87d909d8bed6c0790e6b35804b874d8a31490364412b9c93e4ca9e5a3abbc39",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-04",
+    "file": "chapters/19-scripts.md",
+    "line": 43,
+    "language": "bash",
+    "sha256": "4a691d7ddda95443d4b8e4bf49dff6475334430376fc32d3486ba84852aa95ec",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-05",
+    "file": "chapters/19-scripts.md",
+    "line": 56,
+    "language": "bash",
+    "sha256": "adf23a0b74427f7e9d3aad0d76f4b84dfcfb69a4eb93c984571ab1b145c624aa",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-06",
+    "file": "chapters/19-scripts.md",
+    "line": 75,
+    "language": "bash",
+    "sha256": "1f0afcb236a23b485299e382cee29e4d6dc8af61542368b7f15a7154dddccb95",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "19-07",
+    "file": "chapters/19-scripts.md",
+    "line": 87,
+    "language": "bash",
+    "sha256": "9abf6f1541deefb2ba6e1b5d2d3913b55162c734145c4f054716324cf2e43639",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "20-01",
+    "file": "chapters/20-script-practice.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "9c79c8c5afc29c18a1179521394b2cbb4cc605245addc4036e3c0e21c4da6a37",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "20-02",
+    "file": "chapters/20-script-practice.md",
+    "line": 18,
+    "language": "bash",
+    "sha256": "c81ff226e5f4d99d535ccc4777f49deff6fca67e7c206d8c2a92bcc79438abb2",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "20-03",
+    "file": "chapters/20-script-practice.md",
+    "line": 57,
+    "language": "bash",
+    "sha256": "047b8f7dad2284dc5d5363b59e843338fb647d81796d3db3694445a42972e0a4",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "20-04",
+    "file": "chapters/20-script-practice.md",
+    "line": 75,
+    "language": "bash",
+    "sha256": "8d0ee8ed4e729d9f8d1a3bd699a30861dfee588e61488d6b2129bb2b09022bca",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "21-01",
+    "file": "chapters/21-development.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "f4c512a9638882f37f07ca987f47b5b8c38bbdbb6207ed1adb4de2a96f6050fd",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "21-02",
+    "file": "chapters/21-development.md",
+    "line": 30,
+    "language": "bash",
+    "sha256": "e4ee2dea95aea1f3bd216b377204db60aec5e3a2e9aeb0b4c513c31f8f52825c",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "21-03",
+    "file": "chapters/21-development.md",
+    "line": 44,
+    "language": "text",
+    "sha256": "2d8ce270b8276c89ae62659a27c7ee7e2e17a0442e80e9f6c11c2e065d1bed49",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "22-01",
+    "file": "chapters/22-java.md",
+    "line": 11,
+    "language": "bash",
+    "sha256": "5532ce9f40539d684fb2f3619c716de5afca5027314ea78c194f9fe30646c37a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-02",
+    "file": "chapters/22-java.md",
+    "line": 19,
+    "language": "bash",
+    "sha256": "5660ab554c2a0a9aa98948093cd18a7448192d2fa096e5bcd62dfb09f3d459b9",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-03",
+    "file": "chapters/22-java.md",
+    "line": 36,
+    "language": "bash",
+    "sha256": "84d8a74416fdf8714acb4920a929146d3dd11b66fa9496a551d14f90a046b71a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-04",
+    "file": "chapters/22-java.md",
+    "line": 44,
+    "language": "java",
+    "sha256": "05755d879c0236b5e72b99cb69073e00d3947887b926fc51d426de3818b9d9f1",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "22-05",
+    "file": "chapters/22-java.md",
+    "line": 98,
+    "language": "bash",
+    "sha256": "6a775df4f45a40dfbaab218b01e0809b6c4408c820c6f6560272c3c7c1732f3f",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-06",
+    "file": "chapters/22-java.md",
+    "line": 109,
+    "language": "bash",
+    "sha256": "ae33bebb3b802d51be7ff2cec7b830ddf5daf7e48f7d75c6158b5e5618222fce",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-07",
+    "file": "chapters/22-java.md",
+    "line": 125,
+    "language": "bash",
+    "sha256": "8e8b92a659fe8259cd633013c6199e52e97d5d7849c2df543298d009ceb6d418",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "22-08",
+    "file": "chapters/22-java.md",
+    "line": 134,
+    "language": "xml",
+    "sha256": "1df84442cd904d1844fc804dabd748eb495cfca33dacee13abbdbebbdbf2e9fd",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "22-09",
+    "file": "chapters/22-java.md",
+    "line": 170,
+    "language": "java",
+    "sha256": "e889f85be6677217d0d835a04d8e5744696fbcabcbb6cce3afe05e7672d94547",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "22-10",
+    "file": "chapters/22-java.md",
+    "line": 194,
+    "language": "properties",
+    "sha256": "396799300612a81a484cf5b7753570dc06aa4e8c7672c00f39ae878737683534",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "22-11",
+    "file": "chapters/22-java.md",
+    "line": 203,
+    "language": "bash",
+    "sha256": "48c65ac5434ba1bed94841df7e071e559427d064d166b1f9c8b940965bd8fd2b",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "23-01",
+    "file": "chapters/23-deployment.md",
+    "line": 31,
+    "language": "bash",
+    "sha256": "200ab7e321fd770eda5c06f654cdd36051d9a8cf740765099255ec220e1252e5",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-01",
+    "file": "chapters/24-project.md",
+    "line": 15,
+    "language": "bash",
+    "sha256": "39ed8a87c9b2b3af4fa8d867d62132762d3c730e3228e9a6c5d1dc7d4bb121b7",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-02",
+    "file": "chapters/24-project.md",
+    "line": 30,
+    "language": "bash",
+    "sha256": "ff2fa800f360cd0e834b67d510d8359d1bc07d9dda8933da254503ddbf40623b",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-03",
+    "file": "chapters/24-project.md",
+    "line": 36,
+    "language": "bash",
+    "sha256": "5b21403e95e6ff6e7f3c5d472bec0cea3172a2a26961702e9e2896e8187b29de",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-04",
+    "file": "chapters/24-project.md",
+    "line": 52,
+    "language": "bash",
+    "sha256": "628a19fc4b755db71e620d440c92f9ab1dc3cf98209bbeee04f9e7afd4bc6154",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-05",
+    "file": "chapters/24-project.md",
+    "line": 67,
+    "language": "bash",
+    "sha256": "bfd21cc5547f582bb74e22217985442aaed38c88bcbea80890a8fcf9b15ec68e",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-06",
+    "file": "chapters/24-project.md",
+    "line": 78,
+    "language": "bash",
+    "sha256": "68a60f53cab6dc85c161dcd56b1c674ba437c44d0e9004daf470421fd2aceabf",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-07",
+    "file": "chapters/24-project.md",
+    "line": 84,
+    "language": "ini",
+    "sha256": "14d08c4dbe0b37468cb26e679a35999e96505288dea7941684b7357b10a5ddee",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "not applicable"
+  },
+  {
+    "id": "24-08",
+    "file": "chapters/24-project.md",
+    "line": 116,
+    "language": "bash",
+    "sha256": "ecfa4295e716b884de3ef25b212226bf3dc1425ce4da62544901f40618b8949b",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-09",
+    "file": "chapters/24-project.md",
+    "line": 121,
+    "language": "bash",
+    "sha256": "8ddcb38aa948d848c15da352a81ea2ae99256d731fca5bd67614265abb161d26",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-10",
+    "file": "chapters/24-project.md",
+    "line": 150,
+    "language": "bash",
+    "sha256": "69b0f6cdaea022bb194da3527d8a9dacfa2fca3994c8b6dc304713798ed0af57",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-11",
+    "file": "chapters/24-project.md",
+    "line": 165,
+    "language": "bash",
+    "sha256": "593380e9c3cbfcada6d9d27628e7d83a4c7ebf3b4bae6e394de9d9967f21458a",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-12",
+    "file": "chapters/24-project.md",
+    "line": 184,
+    "language": "bash",
+    "sha256": "74e215c6d2459248479313468b130a1687a68f858f9ba58e9c955cfd2e033d65",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-13",
+    "file": "chapters/24-project.md",
+    "line": 195,
+    "language": "bash",
+    "sha256": "0e3b4e50365cb95e49eef6bbcfe33c4704c2b2a79b69de1b47ce132b6a5b02a7",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  },
+  {
+    "id": "24-14",
+    "file": "chapters/24-project.md",
+    "line": 210,
+    "language": "bash",
+    "sha256": "21b2bba3a6bd931ba0d29575c4a7ba42e464d9804b0b4e8deeab1595a9743651",
+    "review": "静态审查完成；目标系统执行另记",
+    "syntax": "Git Bash bash -n passed"
+  }
+]

@@ -1,5 +1,7 @@
 # 第 11 章 systemd 与服务
 
+> 本章任务｜把已启用、正在运行和应用可用三种状态分开判断。
+
 ## 11.1 关掉终端以后谁照看程序
 
 ### 11.1.1 服务与管理器
@@ -8,7 +10,7 @@ SSH 登录服务、定时任务和应用后端往往需要在没有人打开终�
 
 systemd 用 unit，即单元，描述管理对象。.service 是服务单元，.socket 可以描述监听套接字，.timer 可以安排定时触发。现在先掌握 service。systemctl 是控制管理器的命令，ctl 与 control 关联；journalctl 用来查询 journal 日志。
 
-:::diagram service
+![图 11-1 服务管理关系](../assets/diagrams/service.svg)
 
 ### 11.1.2 确认管理器
 

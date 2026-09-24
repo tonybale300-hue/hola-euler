@@ -1,5 +1,7 @@
 # 第 2 章 Terminal、Shell 与 Bash
 
+> 本章任务｜输出一行文字，查到帮助，并独立退出分页器。
+
 ## 2.1 光标后面发生了什么
 
 ### 2.1.1 一个窗口，三层工作
@@ -8,7 +10,7 @@
 
 终端窗口可以运行 Bash，也可以运行别的 Shell。Windows 的 PowerShell 窗口不会因为长得像 Linux 终端就支持本书全部命令。请在 openEuler 的控制台或已登录 openEuler 的远程终端中操作。
 
-:::diagram shell
+![图 2-1 一条命令的工作过程](../assets/diagrams/shell.svg)
 
 ### 2.1.2 先试一个容易看清结果的命令
 

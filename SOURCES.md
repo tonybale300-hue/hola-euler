@@ -68,11 +68,11 @@
 
 [https://vimhelp.org/usr_toc.txt.html](https://vimhelp.org/usr_toc.txt.html)
 
-## S06 openEuler 管理文档入口与账户工具手册
+## S06 openEuler 常用技能与账户工具手册
 
-对应章节 7、9。适用范围为 SP4 入口；上游账户语义。用途为 用户、组与系统管理；sudo 策略需实机核对。
+对应章节 7、9。适用范围为 SP4 常用技能；上游账户语义。用途为 用户、组与系统管理；sudo 策略需实机核对。
 
-[https://docs.openeuler.org/en/docs/24.03_LTS_SP4/server/index.html](https://docs.openeuler.org/en/docs/24.03_LTS_SP4/server/index.html)
+[https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/maintenance/common_skills/common_configurations.html](https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/maintenance/common_skills/common_configurations.html)
 
 [https://man7.org/linux/man-pages/man8/useradd.8.html](https://man7.org/linux/man-pages/man8/useradd.8.html)
 
@@ -220,4 +220,41 @@
 
 部分 GNU 页面初次直连超时，后续通过官方索引与 /s/ 路径检索。freedesktop HTML 手册取回被拒绝后改读 systemd 官方仓库手册源码。openEuler 的个别猜测路径无法取回，未把它们列成已核对正文。SP4 快速入门旧子页面含其他版本残留，本书使用新版入口并与镜像目录交叉确认，未抄写其过时版本指引。
 
-SP4 镜像目录与文档已确认存在；尚未启动目标虚拟机。实际包供应、sudo 策略、网络、SELinux 与服务端到端行为均须实测。完整验收表见 review/VALIDATION.md。
+SP4 镜像目录与文档已确认存在；目标虚拟机 SSH 已到达，但认证尚未完成，未进入系统执行实验。实际包供应、sudo 策略、网络、SELinux 与服务端到端行为均须实测。完整验收表见 review/VALIDATION.md。
+
+
+## S26 Hello 算法的阅读与练习组织
+
+对应章节 0 至 24。用于借鉴图解、短代码实践、提示框和练习的组织方法，不作为 Linux 命令语义依据。正文与本书新增图示独立创作，没有复制其教材段落或插图。
+
+[Hello 算法如何使用本书](https://www.hello-algo.com/chapter_preface/suggestions/)
+
+## S27 openEuler 中文运维文档交叉核对
+
+对应章节 1、9、12、13、23。核对安装前提、RPM 查询、DNF 仓库查询和 SSH 基本流程。SP4 常用技能页中仍有较早版本的示例包名，使用时只核对通用语义，不把样例包版本写成本机结果。网络连接的保存格式以目标系统实际查询为准。
+
+[SP4 服务器快速入门](https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/quickstart/quick_start_server.html)
+
+[SP4 常用技能](https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/maintenance/common_skills/common_configurations.html)
+
+[SP4 网络配置](https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/network/network_config/network_configuration.html)
+
+[24.03 LTS 的 DNF 管理说明](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Administration/使用DNF管理软件包.html)
+
+最后一项属于 24.03 LTS 文档，提供配置位置与工具概念参考，不用其中其他发行版本的源地址替换 SP4 软件源。
+
+## S28 GNU 目标目录语义
+
+对应章节 4、24。核对 ln 与 mv 的 -T，把软链接路径当作目标条目，避免进入它指向的目录。只使用长期支持的选项，未引入当前上游新增的交换接口。
+
+[GNU 目标目录选项](https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html)
+
+[GNU ln 说明](https://www.gnu.org/software/coreutils/manual/html_node/ln-invocation.html)
+
+## S29 SSH 转发失败与 HTTP 响应
+
+对应章节 13、20、22、24。核对转发监听建立失败时的退出行为，以及 405 的 Allow 字段和 HEAD 无正文约定。
+
+[OpenSSH 客户端配置](https://man.openbsd.org/ssh_config#ExitOnForwardFailure)
+
+[HTTP 语义 RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html)

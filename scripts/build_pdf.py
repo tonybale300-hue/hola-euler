@@ -1,6 +1,6 @@
-"""Build the private review edition. Original vector cover and diagrams."""
+"""Build the private review edition from the shared manuscript."""
 from pathlib import Path
-import re,html,json,os
+import re,html,json,os,argparse
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -16,7 +16,8 @@ from reportlab.graphics import renderPDF,renderSVG
 import math
 
 B=Path(__file__).resolve().parents[1]
-OUT=B.parent/'Hola-Euler-Alex-review.pdf'
+VERSION=(B/'VERSION').read_text(encoding='utf-8').strip()
+OUT=B/'downloads'/VERSION/f'Hola-Euler-{VERSION}.pdf'
 W,H=170*mm,240*mm
 M=42
 CW=W-2*M
@@ -101,6 +102,9 @@ DIAGRAMS={
 'streams':('图 17-1 三个标准描述符',[['0 / stdin','标准输入，程序从这里读'],['1 / stdout','标准输出，写正常结果'],['2 / stderr','标准错误，写诊断信息']]),
 'pipeline':('图 17-2 排序与统计的管道',[['printf','产生文本行'],['sort','读入并排序'],['uniq -c','统计相邻重复组']]),
 'deploy':('图 23-1 发布目录与可写数据',[['/opt/labapp/releases/v1','root 管理的程序版本'],['/opt/labapp/current','指向当前版本的软链接'],['/var/lib/labapp','labapp 可写的数据目录']]),
+'vim-modes':('图 6-1 输入之前先认模式',[['普通模式','移动 / 删除 / 撤销'],['插入模式','把按键写成正文'],['命令行模式','保存 / 退出 / 替换']]),
+'redirection-order':('图 17-3 重定向顺序改变目标',[['先改 1，再复制给 2','cmd >file 2>&1'],['先复制 1，再单独改 1','cmd 2>&1 >file'],['复制保存当时的目标','后面的改变不会自动跟随']]),
+'release-cycle':('图 24-1 版本切换与恢复',[['v1 运行','current 指向 releases/v1'],['v2 验证','停止 / 换链接 / 启动 / 等待'],['回滚 v1','再次启动并核对响应中的版本']]),
 }
 
 class Diagram(Flowable):
@@ -150,6 +154,25 @@ class Diagram(Flowable):
             box(13,117,204,39,'/opt/labapp/current','软链接，只指向当前版本');box(262,117,121,39,'releases/v1','root 管理')
             arrow(217,137,262,137)
             box(13,32,370,58,'/var/lib/labapp','独立的数据目录，由 labapp 写入；不随 current 一起切换')
+        elif self.key=='vim-modes':
+            box(12,65,108,54,'普通模式','命令键改变文本')
+            box(257,112,127,43,'插入模式','输入文字')
+            box(257,30,127,43,'命令行模式',':w / :q / :%s')
+            arrow(120,106,257,138);txt(176,133,'i',10,'Mono',GREEN)
+            arrow(257,118,120,90);txt(173,103,'Esc',9,'Mono')
+            arrow(120,78,257,52);txt(171,57,':',11,'Mono',GREEN)
+            arrow(257,38,120,66);txt(153,29,'Esc / 执行后返回',8)
+        elif self.key=='redirection-order':
+            for y,label,left,right in [(117,'cmd >file 2>&1','1 → file','2 → file'),(57,'cmd 2>&1 >file','1 → file','2 → 终端')]:
+                box(13,y-14,370,47,label)
+                txt(190,y+3,left,9);txt(284,y+3,right,9)
+            txt(18,15,'从左到右安排输出，2 复制的是当时 1 的目标。',9)
+        elif self.key=='release-cycle':
+            box(13,100,104,51,'v1 运行','核对 v1 响应')
+            box(145,100,110,51,'v2 运行','核对 v2 响应')
+            box(282,100,104,51,'v1 恢复','再次核对响应')
+            arrow(117,126,145,126);arrow(255,126,282,126)
+            box(13,26,373,47,'每次切换都要停、换、启、查','停止进程 → 切换链接 → 启动 → 有限等待并检查版本')
         else:
             for i,(a,b) in enumerate(rows):
                 y=self.height-70-i*51
@@ -165,6 +188,11 @@ class Cover(Flowable):
         c=self.canv;c.saveState()
         # The cover flowable origin is the content frame's lower left.
         c.translate(-M,-46)
+        cover=B/'assets/cover/hola-euler.png'
+        if cover.exists():
+            c.setFillColor(colors.white);c.rect(0,0,W,H,fill=1,stroke=0)
+            c.drawImage(str(cover),0,0,width=W,height=H,preserveAspectRatio=True,anchor='c')
+            c.restoreState();return
         c.setFillColor(colors.HexColor('#FAFBF7'));c.rect(0,0,W,H,fill=1,stroke=0)
         c.setFillColor(GREEN);c.rect(0,0,12,H,fill=1,stroke=0)
         c.setFillColor(DARK);c.setFont('CN',11)
@@ -192,7 +220,7 @@ class Cover(Flowable):
 class BookDoc(BaseDocTemplate):
     def __init__(self,path):
         super().__init__(str(path),pagesize=(W,H),leftMargin=M,rightMargin=M,topMargin=45,bottomMargin=43,
-            title='Hola Euler | openEuler Linux 从命令行到服务器实战',author='Alex',subject='作者批阅初稿 v0.1-review',allowSplitting=True)
+            title='Hola Euler | openEuler Linux 从命令行到服务器实战',author='Alex',subject=f'修订审阅版 {VERSION}',allowSplitting=True)
         self.addPageTemplates(PageTemplate(id='normal',frames=[Frame(M,43,CW,H-88,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPageEnd=self.page))
         self.current='';self.headings=[]
     def beforeDocument(self):self.current='';self.headings=[]
@@ -203,7 +231,7 @@ class BookDoc(BaseDocTemplate):
         title=self.current
         while pdfmetrics.stringWidth(title,'CN',8)>CW-110:title=title[:-1]
         c.drawRightString(W-M,H-20,title)
-        c.setFont('CN',7.5);c.drawString(M,23,'作者批阅初稿 · 待目标系统实机验收')
+        c.setFont('CN',7.5);c.drawString(M,23,f'{VERSION} · 修订审阅版 · 实测状态见验证说明')
         c.setFont('Mono',8);c.drawRightString(W-M,23,f'{d.page:03d}')
         c.restoreState()
     def afterFlowable(self,f):
@@ -244,6 +272,8 @@ def parse(text):
             while i<len(lines) and not lines[i].startswith('```'):buf.append(lines[i]);i+=1
             out.append(Code(buf,lang));i+=1;continue
         if line.startswith(':::diagram '):out.append(Diagram(line.split()[-1]));i+=1;continue
+        figure=re.fullmatch(r'!\[[^\]]*\]\(\.\./assets/diagrams/([\w-]+)\.svg\)',line)
+        if figure:out.append(Diagram(figure[1]));i+=1;continue
         m=re.match(r'^(#{1,3}) (.*)',line)
         if m:
             level=len(m[1])-1
@@ -272,6 +302,10 @@ def parse(text):
     return out
 
 def main():
+    global OUT
+    parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path);args=parser.parse_args()
+    if args.output:OUT=args.output
+    OUT.parent.mkdir(parents=True,exist_ok=True)
     story=[Cover()]
     story+=parse((B/'frontmatter.md').read_text(encoding='utf-8'))
     story.append(PageBreak());toc_title=Paragraph('目录',styles['h1']);toc_title.header_current='目录';story.append(toc_title)

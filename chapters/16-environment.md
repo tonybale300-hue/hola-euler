@@ -1,5 +1,7 @@
 # 第 16 章 Bash 环境与环境变量
 
+> 本章任务｜用父、子两个 Bash 观察变量是否被传递。
+
 ## 16.1 同样的命令为什么在另一个终端不一样
 
 ### 16.1.1 变量先属于当前 Shell
@@ -28,13 +30,13 @@ export 是导出，把变量加入随后启动程序可继承的环境。unset �
 
 ```bash
 printf '%s\n' "$PATH"
-type java
+type bash
 command -v bash
 ```
 
-PATH 保存一组用冒号分隔的目录。Bash 对外部命令进行路径查找时会使用它。command -v 查询命令怎样被解析，可用于脚本判断可用性。command 是 Bash 内建工具，不需要把名字编成缩写。
+这里查询已经在使用的 Bash；Java 要到第 22 章才准备。PATH 保存一组用冒号分隔的目录。Bash 对外部命令进行路径查找时会使用它。command -v 查询命令怎样被解析，可用于脚本判断可用性。command 是 Bash 内建工具，不需要把名字编成缩写。
 
-:::diagram pathlookup
+![图 16-1 PATH 的目录次序](../assets/diagrams/pathlookup.svg)
 
 如果当前目录有 report.sh，直接输入 report.sh 不一定能找到，因为当前目录通常不在 PATH 中。使用 ./report.sh 明确指出路径。不要把 . 放到 PATH 开头，那会让工作目录里同名程序优先于可信系统工具。
 

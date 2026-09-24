@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="397.8897637795276" height="192" preserveAspectRatio="xMinYMin meet" viewBox="0 0 397 192" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="397.8897637795276" height="192"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-192)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="397.8897637795276" height="192" rx="6" ry="6" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(94%,96%,92%); fill-rule: evenodd;"/>
+			<text x="12" y="172" style="font-family: SimHei; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,344) scale(1,-1)">图 6-1 输入之前先认模式</text>
+			<rect x="12" y="65" width="108" height="54" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="20" y="104" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,208) scale(1,-1)">普通模式</text>
+			<text x="20" y="74" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,148) scale(1,-1)">命令键改变文本</text>
+			<rect x="257" y="112" width="127" height="43" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="265" y="140" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,280) scale(1,-1)">插入模式</text>
+			<text x="265" y="121" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,242) scale(1,-1)">输入文字</text>
+			<rect x="257" y="30" width="127" height="43" rx="4" ry="4" style="stroke: rgb(84%,88%,83%); stroke-linecap: butt; stroke-width: 0.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="265" y="58" style="font-family: SimHei; font-size: 9.5px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,116) scale(1,-1)">命令行模式</text>
+			<text x="265" y="39" style="font-family: SimSun; font-size: 8.5px;fill: rgb(39%,44%,41%); stroke:none;" transform="translate(0,78) scale(1,-1)">:w / :q / :%s</text>
+			<path d="M 120,106 L 257,138 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="257 138, 252.1819 139.3362, 253.2723 134.6677" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<text x="176" y="133" style="font-family: Consolas; font-size: 10px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,266) scale(1,-1)">i</text>
+			<path d="M 257,118 L 120,90 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="120 90, 124.779 88.53006, 123.819 93.22721" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<text x="173" y="103" style="font-family: Consolas; font-size: 9px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,206) scale(1,-1)">Esc</text>
+			<path d="M 120,78 L 257,52 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="257 52, 253.136 55.17323, 252.2421 50.46305" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<text x="171" y="57" style="font-family: Consolas; font-size: 11px;fill: rgb(26%,52%,20%); stroke:none;" transform="translate(0,114) scale(1,-1)">:</text>
+			<path d="M 257,38 L 120,66 Z" style="stroke: rgb(26%,52%,20%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="120 66, 123.819 62.77279, 124.779 67.46994" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(26%,52%,20%); fill-rule: evenodd;"/>
+			<text x="153" y="29" style="font-family: SimSun; font-size: 8px;fill: rgb(9%,13%,12%); stroke:none;" transform="translate(0,58) scale(1,-1)">Esc / 执行后返回</text>
+		</g>
+	</g>
+</svg>

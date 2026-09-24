@@ -1,10 +1,20 @@
 # 第 19 章 Shell Script 入门
 
+> 本章任务｜写一份有参数检查的脚本，解释失败时的退出状态。
+
 ## 19.1 把重复步骤写进一个文件
 
 ### 19.1.1 第一份脚本
 
-Shell Script 是由 Shell 解释执行的一组命令。脚本能保留操作步骤，但同样会重复其中的错误，所以先从只读任务开始。建立 ~/linux-lab/scripts，用 Vim 写入 hello.sh。
+Shell Script 是由 Shell 解释执行的一组命令。脚本能保留操作步骤，但同样会重复其中的错误，所以先从只读任务开始。
+
+```bash
+mkdir -p ~/linux-lab/scripts
+cd ~/linux-lab/scripts
+vim hello.sh
+```
+
+把下一段保存为 hello.sh 的文件内容，保存后退出编辑器。含有 #!/usr/bin/env bash 的代码块是完整脚本内容，不能直接粘贴到交互终端，尤其不要在自己的登录 Shell 中试执行其中的 exit。
 
 ```bash
 #!/usr/bin/env bash

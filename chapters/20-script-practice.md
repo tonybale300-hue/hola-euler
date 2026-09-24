@@ -1,5 +1,7 @@
 # 第 20 章 Shell Script 实战
 
+> 本章任务｜完成一次备份恢复，验证健康检查能够识别异常。
+
 ## 20.1 为自己的笔记生成可恢复归档
 
 ### 20.1.1 先定义输入、输出与失败条件
@@ -73,18 +75,20 @@ bash backup-notes.sh
 ```bash
 #!/usr/bin/env bash
 url='http://127.0.0.1:8080/health'
-if ! body=$(curl -fsS --connect-timeout 2 --max-time 5 "$url"); then
+if ! body=$(curl -fsS --noproxy '*' \
+    --connect-timeout 2 --max-time 5 \
+    --write-out '\n%{http_code}' "$url"); then
   printf 'Request failed: %s\n' "$url" >&2
   exit 1
 fi
-if [ "$body" != 'ok' ]; then
+if [ "$body" != $'ok\n\n200' ]; then
   printf 'Unexpected response: %s\n' "$body" >&2
   exit 1
 fi
 printf '%s\n' 'healthy'
 ```
 
-curl 的 -f 对 HTTP 错误状态返回失败，-s 减少进度信息，-S 在静默模式下仍显示错误。--max-time 限制总耗时，避免请求无限等待。$(...) 捕获命令的标准输出并去掉末尾换行，因此能与 ok 比较。HTTP 成功也不必然等于业务健康，检查内容应与应用约定一致。
+curl 的 -f 对 HTTP 错误状态返回失败，-s 减少进度信息，-S 在静默模式下仍显示错误。--max-time 限制总耗时，避免请求无限等待。--noproxy 指定本机请求不走代理，--write-out 在正文后追加状态码。$(...) 捕获输出并去掉末尾换行。本例正文约定为 ok 加一个换行，再接输出格式中的换行和 200，因此比较值写成 $'ok\n\n200'。这个 Bash 语法把 \n 转成真正换行，同时核对状态和正文，拒绝携带 ok 文字的重定向响应。HTTP 成功也不必然等于业务健康，检查内容应与应用约定一致。
 
 ### 20.3.2 故障时只提供证据
 

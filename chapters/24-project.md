@@ -1,5 +1,7 @@
 # 第 24 章 综合项目
 
+> 本章任务｜部署 v1，切到 v2，再回滚并核对实际响应。
+
 ## 24.1 从一台新安装的 openEuler 开始
 
 ### 24.1.1 项目目标与验收证据
@@ -51,12 +53,12 @@ install 是安装文件或目录的工具，可以在创建、复制时指定所
 sha256sum ~/linux-lab/java-app/app.jar
 sudo install -o root -g root -m 0644 \
   ~/linux-lab/java-app/app.jar /opt/labapp/releases/v1/app.jar
-sudo ln -s releases/v1 /opt/labapp/current
+sudo ln -sT releases/v1 /opt/labapp/current
 ls -l /opt/labapp/current
 sudo -u labapp test -r /opt/labapp/current/app.jar
 ```
 
-最后一条由 sudo 以 labapp 身份测试可读性，成功通常不输出。它验证文件访问，尚未证明 Java 能运行。当前软链接的相对目标从 /opt/labapp 解析，正好到 releases/v1。
+最后一条由 sudo 以 labapp 身份测试可读性，成功通常不输出。它验证文件访问，尚未证明 Java 能运行。当前软链接的相对目标从 /opt/labapp 解析，正好到 releases/v1。-T 把目标当成一个路径项；如果 current 已存在，应停下来调查，不能意外在它指向的目录中再创建链接。
 
 ## 24.3 先用服务身份前台运行
 
@@ -71,7 +73,13 @@ sudo -u labapp /usr/bin/java -jar /opt/labapp/current/app.jar
 
 ### 24.3.2 写入专用单元文件
 
-在自己的 ~/linux-lab/deploy 中新建 labapp.service，内容如下。
+建立部署目录并进入，然后把下一段保存为 labapp.service。
+
+```bash
+mkdir -p ~/linux-lab/deploy
+cd ~/linux-lab/deploy
+vim labapp.service
+```
 
 ```ini
 [Unit]
@@ -101,6 +109,40 @@ WantedBy=multi-user.target
 
 NoNewPrivileges 限制进程及后代通过执行程序获得新权限，PrivateTmp 提供私有临时目录视图，ProtectSystem=full 使若干系统路径只读，ProtectHome 限制访问家目录。它们不能替代应用安全设计，而且需要与程序真实写入需求相容。示例只读取 JAR 并输出日志，不在程序目录写文件。
 
+### 24.3.3 等待应用真正就绪
+
+Type=simple 的启动请求返回时，HTTP 接口可能还未就绪。下面的脚本最多尝试十次，同时检查响应正文和 HTTP 状态，避免把另一个版本误认成成功。准备 ~/linux-lab/scripts，把它保存为 wait-ready.sh。
+
+```bash
+mkdir -p ~/linux-lab/scripts
+vim ~/linux-lab/scripts/wait-ready.sh
+```
+
+```bash
+#!/usr/bin/env bash
+if [ "$#" -ne 1 ]; then
+  printf 'Usage: %s EXPECTED_VERSION\n' "$0" >&2
+  exit 2
+fi
+expected="Hola Euler $1"
+for attempt in {1..10}; do
+  if body=$(curl -fsS --noproxy '*' \
+      --connect-timeout 1 --max-time 2 \
+      --write-out '\n%{http_code}' \
+      http://127.0.0.1:8080/); then
+    if [ "$body" = "$expected"$'\n\n200' ]; then
+      printf 'Ready: %s\n' "$1"
+      exit 0
+    fi
+  fi
+  if [ "$attempt" -lt 10 ]; then sleep 1; fi
+done
+printf 'Not ready or wrong version: %s\n' "$1" >&2
+exit 1
+```
+
+--noproxy '*' 让这个明确指向本机的请求不经过代理。--write-out 追加 HTTP 状态码，程序的正文自带一个换行，所以匹配值末尾含两个换行后接 200。$'\n' 是 Bash 的转义字符串语法。十次尝试耗尽仍未匹配时，先检查日志与版本指向，不继续下一次切换。
+
 ## 24.4 加载、启动与验收
 
 ### 24.4.1 先验证单元语法
@@ -108,10 +150,11 @@ NoNewPrivileges 限制进程及后代通过执行程序获得新权限，Private
 ```bash
 sudo install -o root -g root -m 0644 \
   ~/linux-lab/deploy/labapp.service \
-  /etc/systemd/system/labapp.service
-sudo systemd-analyze verify /etc/systemd/system/labapp.service
-sudo systemctl daemon-reload
-sudo systemctl enable --now labapp.service
+  /etc/systemd/system/labapp.service &&
+  sudo systemd-analyze verify /etc/systemd/system/labapp.service &&
+  sudo systemctl daemon-reload &&
+  sudo systemctl enable --now labapp.service &&
+  bash ~/linux-lab/scripts/wait-ready.sh v1
 systemctl status labapp.service --no-pager
 ```
 
@@ -139,30 +182,48 @@ sudo journalctl -u labapp.service -n 30 --no-pager
 把 LabServer.java 中的 String version = "v1" 改为 v2，按第 22 章重新编译与打包。先核对新 JAR 和版本记录，再安装到新的、此前不存在的版本目录。
 
 ```bash
-sudo install -d -o root -g root -m 0755 \
-  /opt/labapp/releases/v2
-sudo install -o root -g root -m 0644 \
-  ~/linux-lab/java-app/app.jar /opt/labapp/releases/v2/app.jar
-sudo systemctl stop labapp.service
-sudo ln -s releases/v2 /opt/labapp/current.next
-sudo mv -Tf /opt/labapp/current.next /opt/labapp/current
-sudo systemctl start labapp.service
-curl -fsS http://127.0.0.1:8080/
+test ! -e /opt/labapp/releases/v2 &&
+  test ! -L /opt/labapp/releases/v2 &&
+  sudo install -d -o root -g root -m 0755 \
+    /opt/labapp/releases/v2 &&
+  sudo install -o root -g root -m 0644 \
+    ~/linux-lab/java-app/app.jar /opt/labapp/releases/v2/app.jar
 ```
 
-执行前确认 current 是本章创建的软链接、current.next 不存在。GNU mv 的 -T 把目标当成一个路径项而非要进入的目录，-f 允许替换本章已确认的链接。切换前先停止服务，会带来短暂中断；这是单机教学流程，没有承诺零停机。此处只更换 JAR 指向，单元定义没变，无须额外 daemon-reload。
+确认上面的安装成功后再执行切换。
+
+```bash
+test -L /opt/labapp/current &&
+  test ! -e /opt/labapp/current.next &&
+  test ! -L /opt/labapp/current.next &&
+  sudo systemctl stop labapp.service &&
+  sudo ln -sT releases/v2 /opt/labapp/current.next &&
+  sudo mv -Tf /opt/labapp/current.next /opt/labapp/current &&
+  sudo systemctl start labapp.service &&
+  bash ~/linux-lab/scripts/wait-ready.sh v2
+```
+
+执行前确认 current 是本章创建的软链接、current.next 不存在。-e 检查可解析的对象，-L 还能发现悬空链接，因此二者都要检查。&& 让前一步失败后停止后续步骤；没有输出的检查失败也应调查，不能跳过继续执行。GNU mv 的 -T 把目标当成一个路径项而非要进入的目录，-f 允许替换本章已确认的链接。切换前先停止服务，会带来短暂中断；这是单机教学流程，没有承诺零停机。此处只更换 JAR 指向，单元定义没变，无须额外 daemon-reload。
 
 ### 24.5.2 回滚需要再次验证
 
 ```bash
-sudo systemctl stop labapp.service
-sudo ln -s releases/v1 /opt/labapp/current.next
-sudo mv -Tf /opt/labapp/current.next /opt/labapp/current
-sudo systemctl start labapp.service
-curl -fsS http://127.0.0.1:8080/
+test -L /opt/labapp/current &&
+  test ! -e /opt/labapp/current.next &&
+  test ! -L /opt/labapp/current.next &&
+  test -r /opt/labapp/releases/v1/app.jar &&
+  sudo systemctl stop labapp.service &&
+  sudo ln -sT releases/v1 /opt/labapp/current.next &&
+  sudo mv -Tf /opt/labapp/current.next /opt/labapp/current &&
+  sudo systemctl start labapp.service &&
+  bash ~/linux-lab/scripts/wait-ready.sh v1
 ```
 
-预期根路径重新返回 v1。再次检查日志与健康接口。v1 文件仍保存在版本目录里，回滚没有依赖重新下载旧包。若将来加入数据写入，应额外处理数据格式兼容与备份。
+预期等待脚本输出 Ready: v1。再访问根路径时应重新看到 v1。切换中途失败可能让服务保持停止；先检查 current 与 current.next 的实际状态，保留失败现场，再恢复一个已验证版本，不能无条件继续粘贴后续命令。再次检查日志与健康接口。v1 文件仍保存在版本目录里，回滚没有依赖重新下载旧包。若将来加入数据写入，应额外处理数据格式兼容与备份。
+
+![图 24-1 版本切换与恢复](../assets/diagrams/release-cycle.svg)
+
+> 提示｜current 指向哪里，决定下一次启动从哪里读取 JAR。已经运行的 JVM 不会因软链接改变而自动换成新版本。切换之后要重新启动，并用带版本的响应核对。
 
 ## 24.6 遇到失败时按证据收窄范围
 
@@ -192,4 +253,4 @@ curl -fsS http://127.0.0.1:8080/
 
 本章新命令为 install / 安装文件与目录、systemd-analyze / 管理器分析工具。全书使用过的路径、权限、进程、日志和网络在这里一起接受检验。
 
-资料依据见 S09、S10、S20、S23、S24。答案见第 24 章答案。
+资料依据见 S09、S10、S20、S23、S24、S28、S29。答案见第 24 章答案。

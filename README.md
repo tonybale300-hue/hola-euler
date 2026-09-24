@@ -8,15 +8,16 @@
 
 从建立第一个目录开始，学会查文件、读权限、写脚本，最后在 openEuler 虚拟机中部署一个可以检查、更新和回滚的 Java 服务。
 
-本仓库用于作者与获授权读者共同审阅。当前保存 v0.1-review 原始批阅稿；技术验收尚未完成。
+本仓库用于作者与获授权读者共同审阅。当前版本为 **v0.2.0**，共 **136 页 PDF、25 章、150 道练习和答案、20 幅图示**。全文已经过逐章命令审查；openEuler 端到端实测仍待完成。
 
 ## 下载与阅读
 
 | 版本 | PDF | EPUB | 说明 |
 |---|---|---|---|
+| **v0.2.0** | [下载 PDF](downloads/v0.2.0/Hola-Euler-v0.2.0.pdf?raw=true) | [下载 EPUB](downloads/v0.2.0/Hola-Euler-v0.2.0.epub?raw=true) | 修订命令前提、失败处理与部署等待，新增图示和提示框 |
 | v0.1-review | [下载 PDF](downloads/v0.1-review/Hola-Euler-v0.1-review.pdf?raw=true) | [下载 EPUB](downloads/v0.1-review/Hola-Euler-v0.1-review.epub?raw=true) | 首轮批阅稿，保留供修订对照 |
 
-PDF 保留固定页码，适合批注和打印；EPUB 支持调整字号，适合手机与电子书阅读器。私有仓库下载需要登录具有访问权限的 GitHub 账号，链接不向所有人公开。
+PDF 保留固定页码，适合批注和打印；EPUB 支持调整字号，适合手机与电子书阅读器。若浏览器先显示预览，可点击 GitHub 的下载原文件按钮保存。私有仓库下载需要登录具有访问权限的 GitHub 账号，链接不向所有人公开。[SHA256 校验清单](downloads/SHA256SUMS) 可用于检查下载后的文件是否一致。
 
 也可以直接阅读 [完整目录](TOC.md)，从 [第 0 章](chapters/00-preface.md) 开始。
 
@@ -59,10 +60,10 @@ PDF 保留固定页码，适合批注和打印；EPUB 支持调整字号，适�
 EPUB 构建仅需要 Python 3 的标准库。在仓库根目录运行以下命令，读取同一套正文和插图。
 
 ```text
-python scripts/build_epub.py --version v0.1-review
+python scripts/build_epub.py
 ```
 
-PDF 构建需要 Python、ReportLab 和可用中文字体；当前脚本使用 Windows 的 SimSun、SimHei、Consolas，不随仓库分发字体。完整构建与验证说明随修订版补充。
+PDF 构建需要 Python、ReportLab 和可用中文字体；当前脚本使用 Windows 的 SimSun、SimHei、Consolas，不随仓库分发字体。[构建说明](BUILDING.md) 列出依赖、构建命令与验证范围。
 
 ## 批阅与技术验证
 
@@ -70,6 +71,7 @@ PDF 构建需要 Python、ReportLab 和可用中文字体；当前脚本使用 W
 
 - [批阅表](review/REVIEW.md)
 - [已完成检查](review/QA_REPORT.md)
+- [逐章命令审查与 17 项修订](review/COMMAND_REVIEW.md)
 - [目标系统验收清单](review/VALIDATION.md)
 - [版本记录](CHANGELOG.md)
 
@@ -77,6 +79,6 @@ PDF 构建需要 Python、ReportLab 和可用中文字体；当前脚本使用 W
 
 作者为 Alex。本书使用 AI 辅助整理资料、写作、核对和排版，保留 Human-AI Collaboration 声明，最终内容由作者审阅。它是独立教材项目，不代表 openEuler 或其他组织的官方出版物。
 
-技术资料优先查阅 openEuler、GNU、Bash、systemd 和相关工具的官方文档。后续修订参考 [Hello 算法](https://www.hello-algo.com/chapter_preface/suggestions/) 的图解、代码实践与提示框组织方式，正文和图示独立编写。
+技术资料优先查阅 openEuler、GNU、Bash、systemd 和相关工具的官方文档。本次对照了 openEuler SP4 的中文快速入门、常用技能、网络配置文档，并参考 [Hello 算法](https://www.hello-algo.com/chapter_preface/suggestions/) 的图解、代码实践与提示框组织方式，正文和图示独立编写。具体对应关系见 [来源记录](SOURCES.md)。
 
 封面由作者提供并指定用于首页。全书暂未选择开放许可证；私有仓库下载仅供获授权读者使用。后续是否公开、采用何种许可，由作者决定。
