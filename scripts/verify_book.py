@@ -87,7 +87,7 @@ def main():
         result=subprocess.run([args.bash,'--noprofile','--norc',str(B/'examples/wait-ready.sh')],capture_output=True,text=True)
         assert result.returncode==2;tests.append({'script':'wait-ready.sh','case':'missing argument','exit':2})
     (B/'review/command-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    result={'version':version,'chapters':25,'exercises':150,'code_blocks':len(inventory),'languages':dict(counts),'bash_syntax_pass':len(syntax),'synchronized_examples':len(mapping),'mock_tests':tests,'epub':epub,'openEuler_runtime':'pending authentication / not executed','java_runtime':'not executed in this revision'}
+    result={'version':version,'chapters':25,'exercises':150,'code_blocks':len(inventory),'languages':dict(counts),'bash_syntax_pass':len(syntax),'synchronized_examples':len(mapping),'mock_tests':tests,'epub':epub,'openEuler_runtime':'not evaluated by this script; see vm-check-results.json for target-system evidence','java_runtime':'not executed in this revision'}
     (B/'review/static-check-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False))
 

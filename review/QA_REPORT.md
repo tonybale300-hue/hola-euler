@@ -2,6 +2,8 @@
 
 ## 当前版本 v0.2.0
 
+2026-09-24 虚拟机密钥登录与只读环境检查成功，系统为 openEuler 24.03 LTS SP4 x86_64，目标 Bash 5.2.15 对全部 103 段 Bash 示例的语法解析通过。Vim、JDK、Maven 尚未安装，完整章节及服务部署运行仍待验证，见 [vm-check-results.json](vm-check-results.json)。
+
 2026-09-24 已上传至私有仓库 [tonybale300-hue/hola-euler](https://github.com/tonybale300-hue/hola-euler)，保留旧版和新版 PDF、EPUB 及版本标签。下载需要具有仓库访问权限的 GitHub 账号。上传不代表目标系统实测完成。
 
 检查日期为 2026-09-23 至 2026-09-24。PDF 为 136 页，含 25 章、150 道练习及参考答案、5 个附录、20 幅原创图示，采用作者指定封面。

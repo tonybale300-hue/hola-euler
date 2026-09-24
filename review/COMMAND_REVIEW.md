@@ -64,4 +64,4 @@
 
 标准 Java 示例用 Windows 上已有 JDK 执行 javac --release 21 编译通过。本轮没有启动 Java 服务；旧版运行证据不能自动转成新版运行结论。Spring Boot 的 pom.xml 仅做 XML 结构检查，尚未执行 Maven 构建。
 
-虚拟机 SSH 端口已到达，但现有非交互密钥认证失败。未进入系统运行命令，因此没有修改虚拟机上的账户、软件包、网络、防火墙、挂载或服务。连接就绪后按 [VALIDATION.md](VALIDATION.md) 继续逐项实测。
+2026-09-24 已完成专用 SSH 密钥认证，确认虚拟机为 openEuler 24.03 LTS SP4 x86_64。只读清单核对了系统版本、工具与已安装包；103 段 Bash 示例在目标 Bash 5.2.15 下通过 bash -n，未执行示例正文。本次检查未安装软件、创建账户或修改服务、网络、防火墙与挂载。Vim、JDK、Maven 尚未安装，继续按 [VALIDATION.md](VALIDATION.md) 逐项实测，结果见 [vm-check-results.json](vm-check-results.json)。

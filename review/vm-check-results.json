@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-24",
+  "system": "openEuler 24.03 LTS SP4",
+  "architecture": "x86_64",
+  "bash": "5.2.15",
+  "source_version": "v0.2.0",
+  "syntax_blocks_passed": 103,
+  "execution_scope": "SSH login, read-only inventory, Bash syntax parsing; chapter command bodies were not executed",
+  "missing_tools": [
+    "vim",
+    "java",
+    "javac",
+    "jar",
+    "mvn"
+  ],
+  "selinux": "Enforcing",
+  "full_chapter_runtime": "pending"
+}

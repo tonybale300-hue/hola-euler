@@ -67,6 +67,6 @@
     "manifest_resources": 58,
     "checks": "ZIP, XML, manifest, spine, local links and fragments"
   },
-  "openEuler_runtime": "pending authentication / not executed",
+  "openEuler_runtime": "SSH and inventory completed; 103 target Bash syntax checks passed; full runtime pending; see vm-check-results.json",
   "java_runtime": "not executed in this revision"
 }
