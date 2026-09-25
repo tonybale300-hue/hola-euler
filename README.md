@@ -8,13 +8,14 @@
 
 从建立第一个目录开始，学会查文件、读权限、写脚本，最后在 openEuler 虚拟机中部署一个可以检查、更新和回滚的 Java 服务。
 
-本仓库用于作者与获授权读者共同审阅。当前版本为 **v0.2.1**，含 **139 页 PDF、25 章、150 道练习和答案、20 幅图示**。已完成 openEuler 主线运行测试，并修正工具链、手册包和 SSH 转发等问题；重启恢复未执行，完整条件见 [实机报告](review/RUNTIME_REPORT.md)。
+本仓库用于作者与获授权读者共同审阅。当前版本为 **v0.2.2**，含 **140 页 PDF、25 章、150 道练习和答案、20 幅图示**。已完成 openEuler 主线运行测试，并修正工具链、手册包和 SSH 转发等问题；重启恢复未执行，完整条件见 [实机报告](review/RUNTIME_REPORT.md)。
 
 ## 下载与阅读
 
 | 版本 | PDF | EPUB | 说明 |
 |---|---|---|---|
-| **v0.2.1** | [下载 PDF](downloads/v0.2.1/Hola-Euler-v0.2.1.pdf?raw=true) | [下载 EPUB](downloads/v0.2.1/Hola-Euler-v0.2.1.epub?raw=true) | 实机修订版，补充运行证据与适用条件 |
+| **v0.2.2** | [下载 PDF](downloads/v0.2.2/Hola-Euler-v0.2.2.pdf?raw=true) | [下载 EPUB](downloads/v0.2.2/Hola-Euler-v0.2.2.epub?raw=true) | 更正遗漏的旧验证状态提示，运行证据沿用实机报告 |
+| v0.2.1 | [下载 PDF](downloads/v0.2.1/Hola-Euler-v0.2.1.pdf?raw=true) | [下载 EPUB](downloads/v0.2.1/Hola-Euler-v0.2.1.epub?raw=true) | 实机修订版，补充运行证据与适用条件 |
 | v0.2.0 | [下载 PDF](downloads/v0.2.0/Hola-Euler-v0.2.0.pdf?raw=true) | [下载 EPUB](downloads/v0.2.0/Hola-Euler-v0.2.0.epub?raw=true) | 修订命令前提、失败处理与部署等待，新增图示和提示框 |
 | v0.1-review | [下载 PDF](downloads/v0.1-review/Hola-Euler-v0.1-review.pdf?raw=true) | [下载 EPUB](downloads/v0.1-review/Hola-Euler-v0.1-review.epub?raw=true) | 首轮批阅稿，保留供修订对照 |
 
@@ -41,7 +42,7 @@ PDF 保留固定页码，适合批注和打印；EPUB 支持调整字号，适�
 - Java 部分以 JDK 21 为基线。Spring Boot 是可选学习分支，综合项目采用标准 JDK 示例。
 - IP、用户名、网卡名、PID 和包版本要按自己的环境查询，不能直接套用截图中的值。
 
-> 看到“待实机验证”，表示该项没有目标系统执行证据。语法检查、资料对照和 Windows 上的运行记录均不能代替 openEuler 验收。
+> 已完成 openEuler 主线实测；仅对全新安装、带密码的 sudo 交互和重启恢复等未执行项目单独说明。具体范围及运行条件见实机报告。
 
 ## 源稿与示例
 

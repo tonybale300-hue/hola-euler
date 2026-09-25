@@ -70,7 +70,7 @@
 
 ## S06 openEuler 常用技能与账户工具手册
 
-对应章节 7、9。适用范围为 SP4 常用技能；上游账户语义。用途为 用户、组与系统管理；sudo 策略需实机核对。
+对应章节 7、9。适用范围为 SP4 常用技能；上游账户语义。用途为 用户、组与系统管理；已核对目标机 wheel 策略和未授权拒绝；带密码的 sudo 交互未执行。
 
 [https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/maintenance/common_skills/common_configurations.html](https://docs.openeuler.org/zh/docs/24.03_LTS_SP4/server/maintenance/common_skills/common_configurations.html)
 
@@ -130,7 +130,7 @@
 
 ## S14 OpenSSH 官方手册
 
-对应章节 13。适用范围为 OpenBSD 当前手册；SP4 版本待核对。用途为 主机验证、密钥、scp 与端口转发。
+对应章节 13。适用范围为 OpenBSD 当前手册；目标机已确认 OpenSSH 9.6p1，登录、传输和限定目标的转发已验证。用途为 主机验证、密钥、scp 与端口转发。
 
 [https://man.openbsd.org/ssh](https://man.openbsd.org/ssh)
 
@@ -198,7 +198,7 @@
 
 ## S23 firewalld 官方 firewall-cmd 手册
 
-对应章节 23。适用范围为 上游；目标配置待实机核对。用途为 活动 zone 查询；不推断默认开放规则。
+对应章节 23。适用范围为 上游；已查询目标 firewalld 配置并确认运行状态。用途为 活动 zone 查询；不推断默认开放规则。
 
 [https://firewalld.org/documentation/man-pages/firewall-cmd.html](https://firewalld.org/documentation/man-pages/firewall-cmd.html)
 

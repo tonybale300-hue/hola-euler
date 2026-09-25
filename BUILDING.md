@@ -39,7 +39,7 @@ Windows 如需 Git Bash，将 /bin/bash 替换成自己的 bash.exe 路径。脚
 ## 版面验证
 
 ```text
-pdftoppm -r 120 -png downloads/v0.2.1/Hola-Euler-v0.2.1.pdf ../book-check-work/page
+pdftoppm -r 120 -png downloads/v0.2.2/Hola-Euler-v0.2.2.pdf ../book-check-work/page
 ```
 
 检查整本页面，并放大新图示、长代码、提示框和表格。结构检查无法判断文字重叠或图形箭头含义。EPUB 结构检查也不能代表所有阅读器的兼容性，发布前还应在实际阅读器中打开。
