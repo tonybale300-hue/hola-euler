@@ -11,6 +11,6 @@
   "runtime_report": "RUNTIME_REPORT.md",
   "reboot_test": "not performed at user request",
   "runtime_date": "2026-09-24",
-  "unchanged_code_verified_for": "v0.2.2",
-  "evidence_reuse": "All 123 code blocks match v0.2.1 hashes; no new VM execution claimed"
+  "unchanged_code_verified_for": "v1.0.0",
+  "evidence_reuse": "All 123 code blocks match v0.2.2 and v0.2.1 hashes; no new VM execution claimed"
 }

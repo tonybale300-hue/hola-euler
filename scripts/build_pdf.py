@@ -204,7 +204,7 @@ class Cover(Flowable):
         c.setFont('Helvetica-Bold',87);c.drawString(38,H-280,'Euler')
         c.setFillColor(GREEN);c.setFont('Mono',42);c.drawString(322,H-272,'>_')
         c.setFont('CNHead',19);c.setFillColor(DARK);c.drawString(44,H-326,'openEuler Linux')
-        c.setFont('CNHead',21);c.drawString(44,H-357,'从命令行到服务器实战')
+        c.setFont('CNHead',21);c.drawString(44,H-357,'从入门到实战')
         c.setFont('CNHead',14);c.drawString(44,H-403,'Alex 著')
         c.setFillColor(MUTED);c.setFont('CN',10);c.drawString(44,H-426,'写给每一个想真正学会 Linux 的你')
         c.setFillColor(DARK);c.roundRect(44,93,W-88,110,7,fill=1,stroke=0)
@@ -213,14 +213,14 @@ class Cover(Flowable):
         c.drawString(60,159,'$ cd ~/linux-lab')
         c.drawString(60,139,'$ pwd')
         c.setFillColor(colors.white);c.setFont('CN',10);c.drawString(60,115,'从第一个目录，到一次完整部署。')
-        c.setFillColor(GREEN);c.setFont('CNHead',10);c.drawString(44,65,'作者批阅初稿  /  v0.1-review')
+        c.setFillColor(GREEN);c.setFont('CNHead',10);c.drawString(44,65,f'第一版  /  {VERSION}')
         c.setFillColor(MUTED);c.setFont('CN',8.5);c.drawString(44,45,'openEuler 24.03 LTS SP4 · x86_64 · Bash')
         c.restoreState()
 
 class BookDoc(BaseDocTemplate):
     def __init__(self,path):
         super().__init__(str(path),pagesize=(W,H),leftMargin=M,rightMargin=M,topMargin=45,bottomMargin=43,
-            title='Hola Euler | openEuler Linux 从命令行到服务器实战',author='Alex',subject=f'修订审阅版 {VERSION}',allowSplitting=True)
+            title='Hola Euler | openEuler Linux 从入门到实战',author='Alex',subject=f'第一版 {VERSION}',allowSplitting=True)
         self.addPageTemplates(PageTemplate(id='normal',frames=[Frame(M,43,CW,H-88,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPageEnd=self.page))
         self.current='';self.headings=[]
     def beforeDocument(self):self.current='';self.headings=[]
@@ -231,7 +231,7 @@ class BookDoc(BaseDocTemplate):
         title=self.current
         while pdfmetrics.stringWidth(title,'CN',8)>CW-110:title=title[:-1]
         c.drawRightString(W-M,H-20,title)
-        c.setFont('CN',7.5);c.drawString(M,23,f'{VERSION} · 修订审阅版 · 实测状态见验证说明')
+        c.setFont('CN',7.5);c.drawString(M,23,f'{VERSION} · 第一版 · 实测状态见验证说明')
         c.setFont('Mono',8);c.drawRightString(W-M,23,f'{d.page:03d}')
         c.restoreState()
     def afterFlowable(self,f):

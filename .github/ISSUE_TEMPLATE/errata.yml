@@ -1,0 +1,27 @@
+name: 教材勘误
+description: 报告文字、命令、前置条件或电子书显示问题
+title: "[勘误] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 版本与位置
+      placeholder: v1.0.0，第 13 章 13.3.3，PDF 第 x 页
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 问题和复现步骤
+      description: 最小必要片段、预期和实际结果。勿提交密码、私钥或令牌。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行或阅读环境
+      description: 系统、架构、用户、工作目录，或阅读器名称。
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 修改建议

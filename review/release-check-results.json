@@ -1,0 +1,44 @@
+{
+  "version": "v1.0.0",
+  "pdf_pages": 140,
+  "code_blocks_unchanged": 123,
+  "historical_blobs_scanned": 209,
+  "current_files_scanned": 117,
+  "credential_pattern_matches": 0,
+  "pdf_embedded_fonts": [
+    "/AAAAAA+Consolas",
+    "/AAAAAA+SimHei",
+    "/AAAAAA+SimSun-0",
+    "/AAAAAB+SimHei",
+    "/AAAAAB+SimSun-0",
+    "/AAAAAC+SimHei",
+    "/AAAAAC+SimSun-0",
+    "/AAAAAD+SimSun-0"
+  ],
+  "download_files": 10,
+  "links": "local Markdown file targets passed",
+  "epub_rendering": [
+    {
+      "case": "narrow-java",
+      "width": 430,
+      "scroll": 415,
+      "images": true,
+      "title": "第 22 章 Java 与 Linux"
+    },
+    {
+      "case": "narrow-ssh",
+      "width": 390,
+      "scroll": 375,
+      "images": true,
+      "title": "第 13 章 SSH 与远程服务器"
+    },
+    {
+      "case": "desktop-table",
+      "width": 1000,
+      "scroll": 1000,
+      "images": true,
+      "title": "附录 A 核心命令速查"
+    }
+  ],
+  "scope": "Pattern scan is not a guarantee that all possible sensitive material is absent; EPUB checks use browser XHTML rendering, not dedicated-reader full-book acceptance."
+}

@@ -364,7 +364,6 @@
   - S24 SELinuxProject getenforce 手册源码
   - S25 Ubuntu 与 CentOS 官方项目资料
   - 检索限制与交叉检查
-  - S26 Hello 算法的阅读与练习组织
   - S27 openEuler 中文运维文档交叉核对
   - S28 GNU 目标目录语义
   - S29 SSH 转发失败与 HTTP 响应

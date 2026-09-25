@@ -2179,38 +2179,32 @@
   },
   {
     "level": 1,
-    "title": "S26 Hello 算法的阅读与练习组织",
+    "title": "S27 openEuler 中文运维文档交叉核对",
     "page": 139,
     "key": "h0364"
   },
   {
     "level": 1,
-    "title": "S27 openEuler 中文运维文档交叉核对",
+    "title": "S28 GNU 目标目录语义",
     "page": 139,
     "key": "h0365"
   },
   {
     "level": 1,
-    "title": "S28 GNU 目标目录语义",
+    "title": "S29 SSH 转发失败与 HTTP 响应",
     "page": 140,
     "key": "h0366"
   },
   {
     "level": 1,
-    "title": "S29 SSH 转发失败与 HTTP 响应",
+    "title": "S30 Maven 工具链选择与独立镜像配置",
     "page": 140,
     "key": "h0367"
   },
   {
     "level": 1,
-    "title": "S30 Maven 工具链选择与独立镜像配置",
-    "page": 140,
-    "key": "h0368"
-  },
-  {
-    "level": 1,
     "title": "S31 SSH 服务端转发策略",
     "page": 140,
-    "key": "h0369"
+    "key": "h0368"
   }
 ]
