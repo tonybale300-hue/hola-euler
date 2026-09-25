@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/tonybale300-hue/hola-euler",
+  "private": false,
+  "release": "https://github.com/tonybale300-hue/hola-euler/releases/tag/v1.0.0",
+  "published_at": "2026-09-25T08:45:14Z",
+  "draft": false,
+  "release_commit": "7ca27a57449f264a123c6ccc1fb7b2045d58933e",
+  "anonymous_download_checks": [
+    {
+      "name": "Hola-Euler-v1.0.0.epub",
+      "anonymous_download": true,
+      "sha256_verified": true,
+      "url": "https://github.com/tonybale300-hue/hola-euler/releases/download/v1.0.0/Hola-Euler-v1.0.0.epub"
+    },
+    {
+      "name": "Hola-Euler-v1.0.0.pdf",
+      "anonymous_download": true,
+      "sha256_verified": true,
+      "url": "https://github.com/tonybale300-hue/hola-euler/releases/download/v1.0.0/Hola-Euler-v1.0.0.pdf"
+    },
+    {
+      "name": "SHA256SUMS",
+      "anonymous_download": true,
+      "sha256_verified": true,
+      "url": "https://github.com/tonybale300-hue/hola-euler/releases/download/v1.0.0/SHA256SUMS"
+    }
+  ]
+}

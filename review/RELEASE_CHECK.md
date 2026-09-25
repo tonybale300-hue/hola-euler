@@ -1,6 +1,6 @@
 # v1.0.0 发布检查
 
-2026-09-25。当前文件为第一版发布准备成果；仓库可见性保持私有，正式公开由 Alex 操作。版本号不扩大测试结论。
+2026-09-25 完成发布检查，随后按 Alex 明确授权将仓库改为公开并发布 v1.0.0。匿名访问与下载摘要验证通过，记录见 publication-results.json。版本号不扩大测试结论。
 
 ## 文件与许可
 
@@ -23,11 +23,11 @@
 
 本机 SimSun、SimHei、Consolas 的 OS/2 fsType 均为 8，即可编辑文档嵌入；PDF 采用子集嵌入。没有把 Windows 字体文件提交到仓库，EPUB 未打包字体。依据为 [Microsoft 文档嵌入说明](https://learn.microsoft.com/en-us/typography/fonts/font-faq#document-embedding)。这些检查针对本机系统字体及本次文件，不代表对所有第三方素材作出保证。
 
-## 公开时的操作
+## 已完成的公开流程
 
 1. 核对 v1.0.0 下载文件及 LICENSE.md，确认采用当前使用规则。
 2. 将仓库可见性改为 Public。历史提交和标签随仓库一起可见，旧版下载归档保留原内容。
-3. 在 Releases 中检查准备好的 v1.0.0 草稿及附件，然后发布 Release。
+3. 核对 v1.0.0 草稿和附件后正式发布 Release。
 4. 用未登录的浏览器检查 README、PDF 和 EPUB 下载，再向读者分享仓库或发布页链接。
 
 新 ISO 安装、带密码 sudo、重启恢复和独立新手试读仍未完成，具体范围见 KNOWN_ISSUES.md。重启按作者要求继续暂缓。

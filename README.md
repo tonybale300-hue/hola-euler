@@ -18,7 +18,7 @@
 |---|---|---|
 | **v1.0.0** | [下载 PDF](downloads/v1.0.0/Hola-Euler-v1.0.0.pdf?raw=true) | [下载 EPUB](downloads/v1.0.0/Hola-Euler-v1.0.0.epub?raw=true) |
 
-PDF 适合固定页码阅读、批注和打印；EPUB 支持调整字号。点击下载原文件即可保存，文件摘要见 [SHA256 校验清单](downloads/SHA256SUMS)。仓库尚未公开时，仅有访问权限的账号能下载；公开后无需申请仓库访问。
+PDF 适合固定页码阅读、批注和打印；EPUB 支持调整字号。点击下载原文件即可保存，文件摘要见 [SHA256 校验清单](downloads/SHA256SUMS)。仓库现已公开，任何人无需登录即可访问和下载。也可从 [v1.0.0 发布页](https://github.com/tonybale300-hue/hola-euler/releases/tag/v1.0.0) 获取附件。
 
 [完整目录](TOC.md) · [开始阅读](chapters/00-preface.md) · [发布说明](RELEASE_NOTES.md) · [报告勘误](CONTRIBUTING.md)
 
