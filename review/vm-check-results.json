@@ -1,18 +1,14 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "system": "openEuler 24.03 LTS SP4",
   "architecture": "x86_64",
   "bash": "5.2.15",
-  "source_version": "v0.2.0",
-  "syntax_blocks_passed": 103,
-  "execution_scope": "SSH login, read-only inventory, Bash syntax parsing; chapter command bodies were not executed",
-  "missing_tools": [
-    "vim",
-    "java",
-    "javac",
-    "jar",
-    "mvn"
-  ],
+  "source_version": "v0.2.1",
+  "syntax_blocks_passed": 110,
+  "execution_scope": "This invocation only parses current Bash blocks; completed runtime coverage and limitations are recorded in RUNTIME_REPORT.md",
+  "missing_tools": [],
   "selinux": "Enforcing",
-  "full_chapter_runtime": "pending"
+  "runtime_report": "RUNTIME_REPORT.md",
+  "reboot_test": "not performed at user request",
+  "runtime_date": "2026-09-24"
 }

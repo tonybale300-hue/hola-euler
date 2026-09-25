@@ -8,13 +8,14 @@
 
 从建立第一个目录开始，学会查文件、读权限、写脚本，最后在 openEuler 虚拟机中部署一个可以检查、更新和回滚的 Java 服务。
 
-本仓库用于作者与获授权读者共同审阅。当前版本为 **v0.2.0**，共 **136 页 PDF、25 章、150 道练习和答案、20 幅图示**。全文已经过逐章命令审查；openEuler 端到端实测仍待完成。
+本仓库用于作者与获授权读者共同审阅。当前版本为 **v0.2.1**，含 **139 页 PDF、25 章、150 道练习和答案、20 幅图示**。已完成 openEuler 主线运行测试，并修正工具链、手册包和 SSH 转发等问题；重启恢复未执行，完整条件见 [实机报告](review/RUNTIME_REPORT.md)。
 
 ## 下载与阅读
 
 | 版本 | PDF | EPUB | 说明 |
 |---|---|---|---|
-| **v0.2.0** | [下载 PDF](downloads/v0.2.0/Hola-Euler-v0.2.0.pdf?raw=true) | [下载 EPUB](downloads/v0.2.0/Hola-Euler-v0.2.0.epub?raw=true) | 修订命令前提、失败处理与部署等待，新增图示和提示框 |
+| **v0.2.1** | [下载 PDF](downloads/v0.2.1/Hola-Euler-v0.2.1.pdf?raw=true) | [下载 EPUB](downloads/v0.2.1/Hola-Euler-v0.2.1.epub?raw=true) | 实机修订版，补充运行证据与适用条件 |
+| v0.2.0 | [下载 PDF](downloads/v0.2.0/Hola-Euler-v0.2.0.pdf?raw=true) | [下载 EPUB](downloads/v0.2.0/Hola-Euler-v0.2.0.epub?raw=true) | 修订命令前提、失败处理与部署等待，新增图示和提示框 |
 | v0.1-review | [下载 PDF](downloads/v0.1-review/Hola-Euler-v0.1-review.pdf?raw=true) | [下载 EPUB](downloads/v0.1-review/Hola-Euler-v0.1-review.epub?raw=true) | 首轮批阅稿，保留供修订对照 |
 
 PDF 保留固定页码，适合批注和打印；EPUB 支持调整字号，适合手机与电子书阅读器。若浏览器先显示预览，可点击 GitHub 的下载原文件按钮保存。私有仓库下载需要登录具有访问权限的 GitHub 账号，链接不向所有人公开。[SHA256 校验清单](downloads/SHA256SUMS) 可用于检查下载后的文件是否一致。
@@ -71,7 +72,8 @@ PDF 构建需要 Python、ReportLab 和可用中文字体；当前脚本使用 W
 
 - [批阅表](review/REVIEW.md)
 - [已完成检查](review/QA_REPORT.md)
-- [逐章命令审查与 17 项修订](review/COMMAND_REVIEW.md)
+- [逐章静态命令审查与首轮 17 项修订](review/COMMAND_REVIEW.md)
+- [实机测试报告与新增 5 项修订](review/RUNTIME_REPORT.md)
 - [目标系统验收清单](review/VALIDATION.md)
 - [版本记录](CHANGELOG.md)
 

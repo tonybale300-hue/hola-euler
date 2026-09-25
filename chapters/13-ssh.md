@@ -51,7 +51,7 @@ ssh -i ~/.ssh/linux-lab_ed25519 \
   -p 2222 alex@127.0.0.1
 ```
 
-服务端 ~/.ssh 通常设为 700，authorized_keys 通常设为 600，所有者应为该账户。具体认证还受服务端策略影响。在第二个窗口验证成功以前保留第一个会话，尤其不要提前关闭密码认证。此初稿的教学路径不要求修改 sshd_config。
+服务端 ~/.ssh 通常设为 700，authorized_keys 通常设为 600，所有者应为该账户。具体认证还受服务端策略影响。在第二个窗口验证成功以前保留第一个会话，尤其不要提前关闭密码认证。公钥安装本身不要求修改 sshd_config；后面的端口转发还要单独检查策略。
 
 ## 13.3 传文件与建立隧道
 
@@ -67,7 +67,7 @@ scp -P 2222 app.jar alex@127.0.0.1:app.jar
 
 ### 13.3.2 只让应用监听服务器本机
 
-服务器上的 Java 服务若监听 127.0.0.1:8080，可从电脑建立本地转发。
+服务器上的 Java 服务若监听 127.0.0.1:8080，并且服务端允许相应转发，可从电脑建立本地转发。
 
 ```bash
 ssh -N -o ExitOnForwardFailure=yes \
@@ -76,6 +76,31 @@ ssh -N -o ExitOnForwardFailure=yes \
 ```
 
 -N 不执行远程命令，-L 配置本地转发。ExitOnForwardFailure=yes 让建立转发监听失败时退出，例如本机 18080 已被占用；它不保证每次转发到应用的连接都成功。最左的 127.0.0.1:18080 是电脑上的监听位置，中间的 127.0.0.1:8080 从服务器一侧解释。隧道保持运行时，在电脑访问 http://127.0.0.1:18080/health 即可到达服务端的 /health。SSH 成功不保证应用端口存在，仍需按第 12 章检查。[S14]
+
+### 13.3.3 登录成功，转发仍可能被拒绝
+
+本次 SP4 实机的配置明确设置了 AllowTcpForwarding no。登录与文件传输正常，转发请求却被拒绝。因此，不能仅凭 ssh -N 仍在运行就判定隧道可用。由管理员检查服务端的有效配置。
+
+```bash
+sudo /usr/sbin/sshd -T | grep -E \
+  '^(allowtcpforwarding|disableforwarding|permitopen) '
+```
+
+若存在 Match 规则，还要结合实际登录用户、客户端地址等条件，用 sshd -T -C 检查对应连接的结果。不要只看配置文件中某一行。确需完成本书实验时，由管理员先备份 /etc/ssh/sshd_config，检查已有规则，再在文件末尾为实际学习用户配置限定目标的本地转发。以下 alex 要换成真实账户名，不能直接套用于所有用户。[S31]
+
+```text
+Match User alex
+    AllowTcpForwarding local
+    PermitOpen 127.0.0.1:8080
+```
+
+这段是 sshd 配置文件内容，不是 Shell 命令。Match 后续的指令属于对应条件范围，不能在它后面随意追加全局配置。若已有更早的匹配项或其他限制，应由管理员合并核对。保存后先验证语法，成功才重新加载。
+
+```bash
+sudo /usr/sbin/sshd -t && sudo systemctl reload sshd
+```
+
+保留原管理会话，另建隧道并实际请求 /health。实验结束后，若这项授权只为测试而设，应恢复备份、再次检查语法并重新加载。本次验收只给独立测试账户临时开放该目标，验证结束已恢复原配置，没有关闭防火墙或 SELinux。
 
 ## 13.4 本章练习
 
@@ -86,6 +111,6 @@ ssh -N -o ExitOnForwardFailure=yes \
 - 找错误｜把私钥上传到服务器当作 authorized_keys 内容，错在哪里？
 - 无提示实操｜建立可信登录，上传一个普通文本文件，核对内容，再正常退出。暂不关闭任何已有认证方式。
 
-本章新命令为 ssh / Secure Shell、ssh-keygen / SSH key generation、ssh-copy-id / 公钥安装、scp / secure copy。退出远程 Shell 可以用 exit，意为退出。版本与认证策略【待 openEuler 24.03 LTS SP4 实机验证】。
+本章新命令为 ssh / Secure Shell、ssh-keygen / SSH key generation、ssh-copy-id / 公钥安装、scp / secure copy。退出远程 Shell 可以用 exit，意为退出。本次已在 SP4 核验密钥登录、文件传输与限定目标的隧道；其他安装方式的策略仍以实际配置为准。
 
 资料依据见 S14、S27、S29。答案见第 13 章答案。

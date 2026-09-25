@@ -1,0 +1,7 @@
+{
+  "health": "ok\n",
+  "root": "Hola Euler v1\n",
+  "passed": true,
+  "bind_conflict_exit": 255,
+  "adaptation": "VM direct SSH endpoint replaces NAT example; test service loopback unchanged"
+}

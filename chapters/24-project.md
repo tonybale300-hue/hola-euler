@@ -66,10 +66,11 @@ sudo -u labapp test -r /opt/labapp/current/app.jar
 
 ```bash
 command -v java
-sudo -u labapp /usr/bin/java -jar /opt/labapp/current/app.jar
+sudo -u labapp /usr/lib/jvm/java-21-openjdk/bin/java \
+  -jar /opt/labapp/current/app.jar
 ```
 
-此处假定 command -v java 已确认 /usr/bin/java 对应所需 JDK 21。若结果不同，后面单元也必须采用验证过的绝对路径。前台启动后，在另一个终端运行 curl -fsS http://127.0.0.1:8080/health。成功后 Ctrl+C 停止，确认端口已释放。这样可以在引入 systemd 之前证明身份、程序和端口的基本组合有效。
+先按第 22 章验证 /usr/lib/jvm/java-21-openjdk/bin/java 确实是 JDK 21。sudo 后的默认 Java 可能不同，因此这里直接指定路径。若本机 JDK 路径不同，前台命令和后面单元都要同步采用验证过的绝对路径。前台启动后，在另一个终端运行 curl -fsS http://127.0.0.1:8080/health。成功后 Ctrl+C 停止，确认端口已释放。这样可以在引入 systemd 之前证明身份、程序和端口的基本组合有效。
 
 ### 24.3.2 写入专用单元文件
 
@@ -91,7 +92,7 @@ Type=simple
 User=labapp
 Group=labapp
 WorkingDirectory=/opt/labapp/current
-ExecStart=/usr/bin/java -jar /opt/labapp/current/app.jar
+ExecStart=/usr/lib/jvm/java-21-openjdk/bin/java -jar /opt/labapp/current/app.jar
 Restart=on-failure
 RestartSec=3
 TimeoutStopSec=15
@@ -240,7 +241,7 @@ test -L /opt/labapp/current &&
 
 最后写一份项目记录，包含系统与 JDK 版本、产物摘要、目录权限、单元内容、启动证据和回滚结果。停止实验服务可用 sudo systemctl disable --now labapp.service，确认只影响自己建立的服务。无须删除账户、版本文件或整个实验目录来证明学完。
 
-> 发布验收｜【待 openEuler 24.03 LTS SP4 实机验证】本章完整流程尚需在目标镜像上从零执行。作者批阅与技术验收分别记录，完成批阅后仍不能把未执行的测试填写为通过。
+> 实机验收｜本次 SP4 已完成独立服务账户、JDK 21 构建、systemd 启动、隧道访问、v2 更新、v1 回滚与故障日志恢复检查。用户选择暂不重启虚拟机，因此重启后的自动恢复仍未验证。测试结束已停止并禁用实验服务，发布文件保留供复核。作者批阅、全新安装复现和重启验收仍需分别完成。
 
 ## 24.7 本章练习
 

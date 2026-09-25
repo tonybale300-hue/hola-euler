@@ -61,7 +61,7 @@ def main():
                 else:row['syntax']='not run this invocation'
             inventory.append(row)
     # Standalone examples must match a complete source block in the manuscript.
-    mapping=[('examples/backup-notes.sh','20-script-practice.md','bash'),('examples/check-health.sh','20-script-practice.md','bash'),('examples/wait-ready.sh','24-project.md','bash'),('examples/java-app/LabServer.java','22-java.md','java'),('examples/spring-lab/pom.xml','22-java.md','xml'),('examples/spring-lab/src/main/java/book/alex/LabApplication.java','22-java.md','java'),('examples/spring-lab/src/main/resources/application.properties','22-java.md','properties'),('examples/labapp.service','24-project.md','ini')]
+    mapping=[('examples/backup-notes.sh','20-script-practice.md','bash'),('examples/check-health.sh','20-script-practice.md','bash'),('examples/wait-ready.sh','24-project.md','bash'),('examples/java-app/LabServer.java','22-java.md','java'),('examples/spring-lab/pom.xml','22-java.md','xml'),('examples/spring-lab/src/main/java/book/alex/LabApplication.java','22-java.md','java'),('examples/spring-lab/src/main/resources/application.properties','22-java.md','properties'),('examples/labapp.service','24-project.md','ini'),('examples/spring-lab/settings-test.xml','22-java.md','xml')]
     for example,chapter,lang in mapping:
         snippets=re.findall('```'+lang+r'\n(.*?)\n```',(B/'chapters'/chapter).read_text(encoding='utf-8'),re.S)
         assert (B/example).read_text(encoding='utf-8').strip() in [s.strip() for s in snippets],example
@@ -87,7 +87,7 @@ def main():
         result=subprocess.run([args.bash,'--noprofile','--norc',str(B/'examples/wait-ready.sh')],capture_output=True,text=True)
         assert result.returncode==2;tests.append({'script':'wait-ready.sh','case':'missing argument','exit':2})
     (B/'review/command-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    result={'version':version,'chapters':25,'exercises':150,'code_blocks':len(inventory),'languages':dict(counts),'bash_syntax_pass':len(syntax),'synchronized_examples':len(mapping),'mock_tests':tests,'epub':epub,'openEuler_runtime':'not evaluated by this script; see vm-check-results.json for target-system evidence','java_runtime':'not executed in this revision'}
+    result={'version':version,'chapters':25,'exercises':150,'code_blocks':len(inventory),'languages':dict(counts),'bash_syntax_pass':len(syntax),'synchronized_examples':len(mapping),'mock_tests':tests,'epub':epub,'openEuler_runtime':'not evaluated by this script; see vm-check-results.json for target-system evidence','java_runtime':'not evaluated by this script; see RUNTIME_REPORT.md'}
     (B/'review/static-check-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False))
 

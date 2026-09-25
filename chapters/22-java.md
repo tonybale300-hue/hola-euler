@@ -14,10 +14,26 @@ dnf provides '*/javac'
 dnf info java-21-openjdk-devel
 ```
 
-本书选择 JDK 21 作为练习基线。java-21-openjdk-devel 是需在本机查询确认的候选开发包；官方 SP4 源码仓库可查到 Java 21 项目，但这不能代替当前 x86_64 启用仓库的二进制包验证。确认来源与交易后安装，再记录以下结果。
+本书选择 JDK 21 作为练习基线。本次已在 SP4 x86_64 官方仓库查询并安装 java-21-openjdk-devel。读者仍应先确认自己的候选包、来源与交易。
 
 ```bash
 sudo dnf install java-21-openjdk-devel
+```
+
+安装成功不代表默认命令已经指向 Java 21。本次一起安装 Maven 后，依赖中同时出现 Java 8、11 和 21，而 java、javac 默认仍选中了 Java 8。先查询 JDK 21 的文件，再验证这份工具链。
+
+```bash
+rpm -ql java-21-openjdk-devel | grep '/bin/javac$'
+ls -ld /usr/lib/jvm/java-21-openjdk
+/usr/lib/jvm/java-21-openjdk/bin/java -version
+/usr/lib/jvm/java-21-openjdk/bin/javac -version
+```
+
+本次验证可用的目录为 /usr/lib/jvm/java-21-openjdk。若本机不同，应使用实际查到并验证过的 JDK 根目录。确认两个版本均为 21 后，在当前终端选择它。
+
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export PATH="$JAVA_HOME/bin:$PATH"
 java -version
 javac -version
 command -v java
@@ -26,6 +42,8 @@ command -v jar
 ```
 
 javac 关联 Java compiler，jar 关联 Java archive。java 与 javac 应属于相容的工具链，不能只看其中一个版本。JAVA_HOME 若被构建工具使用，应指向 JDK 根目录，不是 bin/java 文件；不要从其他机器复制一个绝对目录就假定正确。
+
+> 提示｜这里的 export 只影响当前终端及其后续子进程。换一个终端、重新登录或使用 sudo 后，都要重新核对实际 Java。systemd 不自动继承这个终端的 PATH，第 24 章会在单元中写入已验证的 Java 绝对路径。[S30]
 
 ## 22.2 用标准 JDK 建立第一个 HTTP 服务
 
@@ -114,6 +132,8 @@ ss -ltn
 
 预期健康正文为 ok，根路径正文为 Hola Euler v1。确认 ss 显示的监听地址是 127.0.0.1。完成后回第一个终端 Ctrl+C，释放端口。若出现地址已使用，先查占用者，不要随意结束其他 Java 进程。
 
+> 实测提示｜本次 ss 将监听显示为 [::ffff:127.0.0.1]:8080，这是 IPv4 映射形式的回环地址。检查时要结合完整地址，不能只因出现冒号就断言应用监听了所有网卡。
+
 ## 22.3 把同一目标换成 Spring Boot
 
 ### 22.3.1 固定一份独立项目
@@ -200,6 +220,8 @@ server.port=8080
 
 通过 dnf search maven 与 dnf info maven 确认包和版本，再按第 9 章安装。mvn 是 Maven 的命令名。运行 mvn -version 检查它实际使用的 Java。首次构建需要从配置的依赖仓库下载内容，失败时分别检查仓库、代理和证书，不能把它误判为 Linux 文件权限问题。
 
+安装 Maven 后，在当前终端重新核对本章的 JAVA_HOME 和 PATH。下面的 mvn -version 应显示 Java 21；若仍为 1.8，先修正工具链选择，再构建。
+
 ```bash
 cd ~/linux-lab/spring-lab
 mvn -version
@@ -209,7 +231,32 @@ java -jar target/spring-lab-1.0.0.jar
 
 先停止上一节占用 8080 的程序，再启动此应用。对 /health 与 / 重复 curl 检查。这个极小项目没有随附自动化单元测试，mvn package 成功只说明该构建过程通过，不能声称“业务测试全部通过”。部署可以使用标准 JDK 程序或这份 Spring Boot JAR，第 24 章主线采用前者减少下载依赖。
 
-> 实机核验｜【待 openEuler 24.03 LTS SP4 实机验证】JDK 包、Maven 包、Spring Boot 依赖解析和两个应用的目标系统运行均需记录。其他平台编译通过也不能代替这一验收。
+### 22.3.4 仓库拒绝下载时保留证据
+
+本次测试中，Maven Central 的两个官方入口均返回 HTTP 403。原始构建失败属于依赖访问问题，不能记成默认网络条件下构建成功。随后使用阿里云公开镜像，在独立测试配置下完成了 3.5.16 构建与接口检查。读者应按自己的网络和组织规则选择可信镜像，不要关闭证书校验。[S30]
+
+如需复用这个可选方案，可在项目目录保存 settings-test.xml。
+
+```xml
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+  <mirrors>
+    <mirror>
+      <id>aliyun-central-test</id>
+      <mirrorOf>central</mirrorOf>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+  </mirrors>
+</settings>
+```
+
+在已经选定 JDK 21 的终端执行以下命令。-s 只为本次调用选择配置，不必覆盖系统或个人原有的 settings.xml。-U 要求重新检查缺失的发布依赖与更新的快照，可避免直接沿用上次失败的缓存结果。
+
+```bash
+cd ~/linux-lab/spring-lab
+mvn -U -s settings-test.xml package
+```
+
+> 实机记录｜本次 SP4 上，标准 JDK 程序和 Spring Boot 程序均完成构建、健康接口、主页、回环监听与正常停止检查。Spring Boot 构建使用上述镜像条件；测试范围和失败记录见仓库的运行验收报告。
 
 ## 22.4 本章练习
 

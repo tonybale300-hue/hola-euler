@@ -53,7 +53,7 @@ After=network.target
 Type=simple
 User=labapp
 WorkingDirectory=/opt/labapp/current
-ExecStart=/usr/bin/java -jar /opt/labapp/current/app.jar
+ExecStart=/usr/lib/jvm/java-21-openjdk/bin/java -jar /opt/labapp/current/app.jar
 Restart=on-failure
 RestartSec=3
 
@@ -69,7 +69,7 @@ After 只表达顺序，不单独拉起另一个单元，也不保证网络已�
 
 修改单元文件后，需要 daemon-reload 让管理器重新读取单元定义；它不会自动重启已有程序。修改应用自己的配置，则应按应用支持的机制 reload 或 restart。reload 并非每个服务都支持。把这三类动作分清，排错会少很多歧义。
 
-> 实机核验｜【待 openEuler 24.03 LTS SP4 实机验证】单元名称、systemd 版本、日志权限和最终服务模板必须在目标环境执行核查。
+> 实机记录｜本次目标机使用 systemd 255，sshd.service 查询与日志检查通过，第 24 章最终服务模板已完成启动、升级、回滚与停止验证。本文概念片段用于解释结构，完整部署以第 24 章为准。
 
 ## 11.4 本章练习
 

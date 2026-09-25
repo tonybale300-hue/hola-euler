@@ -1,19 +1,19 @@
 {
-  "version": "v0.2.0",
+  "version": "v0.2.1",
   "chapters": 25,
   "exercises": 150,
-  "code_blocks": 114,
+  "code_blocks": 123,
   "languages": {
-    "bash": 103,
-    "text": 4,
+    "bash": 110,
+    "text": 5,
     "vim": 1,
     "ini": 2,
     "java": 2,
-    "xml": 1,
+    "xml": 2,
     "properties": 1
   },
-  "bash_syntax_pass": 103,
-  "synchronized_examples": 8,
+  "bash_syntax_pass": 110,
+  "synchronized_examples": 9,
   "mock_tests": [
     {
       "script": "check-health.sh",
@@ -67,6 +67,6 @@
     "manifest_resources": 58,
     "checks": "ZIP, XML, manifest, spine, local links and fragments"
   },
-  "openEuler_runtime": "SSH and inventory completed; 103 target Bash syntax checks passed; full runtime pending; see vm-check-results.json",
-  "java_runtime": "not executed in this revision"
+  "openEuler_runtime": "not evaluated by this script; see vm-check-results.json for target-system evidence",
+  "java_runtime": "not evaluated by this script; see RUNTIME_REPORT.md"
 }

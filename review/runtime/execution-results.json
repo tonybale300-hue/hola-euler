@@ -1,0 +1,1028 @@
+[
+  {
+    "name": "00 workspace",
+    "blocks": [
+      "00-01"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "01 platform",
+    "blocks": [
+      "01-01"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "02 shell and help",
+    "blocks": [
+      "02-01",
+      "02-02",
+      "02-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 16,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 0.03,
+    "adaptation": "Noninteractive man pager; keyboard pager tested separately"
+  },
+  {
+    "name": "02 intentional typo",
+    "blocks": [
+      "02-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 127,
+    "expected_exit": 127,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "03 paths",
+    "blocks": [
+      "03-01",
+      "03-02",
+      "03-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "03 failed cd retains directory",
+    "blocks": [
+      "03-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": "Expected failure asserted"
+  },
+  {
+    "name": "03 exercise directories",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "04 files and links",
+    "blocks": [
+      "04-01",
+      "04-02",
+      "04-03",
+      "04-04",
+      "04-05",
+      "04-06"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.08,
+    "adaptation": "rm -i supplied y; link deletion affects only created files"
+  },
+  {
+    "name": "05 text",
+    "blocks": [
+      "05-01",
+      "05-03",
+      "05-04",
+      "05-05",
+      "05-06"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.04,
+    "adaptation": ""
+  },
+  {
+    "name": "05 pager content",
+    "blocks": [
+      "05-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.04,
+    "adaptation": "Keyboard interaction separately tested"
+  },
+  {
+    "name": "07 identity",
+    "blocks": [
+      "07-01",
+      "07-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "07 sudo denial",
+    "blocks": [
+      "07-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 1,
+    "expected_exit": 1,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": "Ordinary test user has no sudo grant; authorized root runs administrator steps"
+  },
+  {
+    "name": "07 account and group",
+    "blocks": [
+      "07-04",
+      "07-05"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.18,
+    "adaptation": "Expected absent-account queries asserted; administrator steps as root"
+  },
+  {
+    "name": "08 permissions",
+    "blocks": [
+      "08-01",
+      "08-02",
+      "08-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "08 other account read denied",
+    "blocks": [],
+    "identity": "labreader",
+    "exit": 1,
+    "expected_exit": 1,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "09 queries",
+    "blocks": [
+      "09-01",
+      "09-02",
+      "09-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 38.92,
+    "adaptation": "Installation executed separately with reviewed transaction"
+  },
+  {
+    "name": "09 update exit code",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.37,
+    "adaptation": ""
+  },
+  {
+    "name": "10 jobs and TERM",
+    "blocks": [
+      "10-01",
+      "10-02",
+      "10-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": "Only newly created sleep PID stopped"
+  },
+  {
+    "name": "11 systemd",
+    "blocks": [
+      "11-01"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "11 ssh unit journal",
+    "blocks": [
+      "11-02"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "12 network",
+    "blocks": [
+      "12-01",
+      "12-02",
+      "12-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 127,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "13 host fingerprint",
+    "blocks": [
+      "13-02"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "14 archives",
+    "blocks": [
+      "14-01",
+      "14-02",
+      "14-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": "Includes corruption detection on test archive"
+  },
+  {
+    "name": "15 storage",
+    "blocks": [
+      "15-01",
+      "15-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "15 pre-mount",
+    "blocks": [
+      "15-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "15 tmpfs",
+    "blocks": [
+      "15-04"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": "Only new empty mountpoint; EXIT trap also unmounts on failure"
+  },
+  {
+    "name": "16 environment",
+    "blocks": [
+      "16-01",
+      "16-02",
+      "16-03",
+      "16-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "17 streams",
+    "blocks": [
+      "17-01",
+      "17-02",
+      "17-03",
+      "17-04",
+      "17-05",
+      "17-06"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "18 search",
+    "blocks": [
+      "18-01",
+      "18-02",
+      "18-03",
+      "18-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "19 invocation",
+    "blocks": [
+      "19-01",
+      "19-02",
+      "19-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": "File uses exact manuscript content; editing tested separately"
+  },
+  {
+    "name": "19 error branches",
+    "blocks": [
+      "19-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "19 snippets",
+    "blocks": [
+      "19-04",
+      "19-06",
+      "19-07"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "20 backup restore",
+    "blocks": [
+      "20-01",
+      "20-02",
+      "20-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "20 missing source",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "20 connection failure",
+    "blocks": [
+      "20-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "21 Git",
+    "blocks": [
+      "21-01",
+      "21-02",
+      "21-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.04,
+    "adaptation": "Repository-local test identity replaces placeholders"
+  },
+  {
+    "name": "02 man after coreutils-help install",
+    "blocks": [
+      "02-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.04,
+    "adaptation": ""
+  },
+  {
+    "name": "12 normal-login PATH",
+    "blocks": [
+      "12-01",
+      "12-02",
+      "12-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 2.64,
+    "adaptation": "PATH matches verified runuser -l login environment"
+  },
+  {
+    "name": "05 interactive less search quit",
+    "blocks": [],
+    "identity": "eulercheck",
+    "passed": true,
+    "adaptation": ""
+  },
+  {
+    "name": "02 interactive man quit",
+    "blocks": [],
+    "identity": "eulercheck",
+    "passed": true,
+    "adaptation": ""
+  },
+  {
+    "name": "06 Vim insert delete undo redo copy search confirm substitute save",
+    "blocks": [
+      "06-01",
+      "06-02"
+    ],
+    "identity": "eulercheck",
+    "passed": true,
+    "adaptation": ""
+  },
+  {
+    "name": "06 Vim discard unsaved changes",
+    "blocks": [
+      "06-01",
+      "06-02"
+    ],
+    "identity": "eulercheck",
+    "passed": true,
+    "adaptation": ""
+  },
+  {
+    "name": "22 baseline default JDK mismatch",
+    "blocks": [
+      "22-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 2,
+    "expected_exit": 2,
+    "passed": true,
+    "seconds": 0.07,
+    "adaptation": "Reproduces uncorrected Java 8 default; manuscript correction selects JDK 21 explicitly"
+  },
+  {
+    "name": "22 selected JDK toolchain",
+    "blocks": [
+      "22-01",
+      "22-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.23,
+    "adaptation": ""
+  },
+  {
+    "name": "22 compile JDK21 and package",
+    "blocks": [
+      "22-03",
+      "22-04",
+      "22-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.45,
+    "adaptation": ""
+  },
+  {
+    "name": "22 HTTP responses and loopback binding",
+    "blocks": [
+      "22-06"
+    ],
+    "identity": "eulercheck",
+    "exit": 1,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 0.05,
+    "adaptation": ""
+  },
+  {
+    "name": "20 health success; 24 readiness branches",
+    "blocks": [
+      "20-04",
+      "24-09"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 9.1,
+    "adaptation": ""
+  },
+  {
+    "name": "22 shutdown releases port",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "22 Maven version",
+    "blocks": [
+      "22-11"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.11,
+    "adaptation": ""
+  },
+  {
+    "name": "22 Spring package",
+    "blocks": [
+      "22-07",
+      "22-08",
+      "22-09",
+      "22-10",
+      "22-11"
+    ],
+    "identity": "eulercheck",
+    "exit": 1,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 1.46,
+    "adaptation": "Batch/no-transfer-progress only; project version and repository unchanged"
+  },
+  {
+    "name": "22 baseline default JDK mismatch",
+    "blocks": [
+      "22-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 2,
+    "expected_exit": 2,
+    "passed": true,
+    "seconds": 0.07,
+    "adaptation": "Reproduces uncorrected Java 8 default; manuscript correction selects JDK 21 explicitly"
+  },
+  {
+    "name": "22 selected JDK toolchain",
+    "blocks": [
+      "22-01",
+      "22-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.24,
+    "adaptation": ""
+  },
+  {
+    "name": "22 compile JDK21 and package",
+    "blocks": [
+      "22-03",
+      "22-04",
+      "22-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.47,
+    "adaptation": ""
+  },
+  {
+    "name": "22 HTTP responses and loopback binding",
+    "blocks": [
+      "22-06"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.05,
+    "adaptation": ""
+  },
+  {
+    "name": "20 health success; 24 readiness branches",
+    "blocks": [
+      "20-04",
+      "24-09"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 9.1,
+    "adaptation": ""
+  },
+  {
+    "name": "22 shutdown releases port",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "22 Maven version",
+    "blocks": [
+      "22-11"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.12,
+    "adaptation": ""
+  },
+  {
+    "name": "22 Spring package with mirror",
+    "blocks": [
+      "22-07",
+      "22-08",
+      "22-09",
+      "22-10",
+      "22-11"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 34.43,
+    "adaptation": "Exact project version; explicit isolated mirror settings when selected"
+  },
+  {
+    "name": "22 Spring endpoints and binding",
+    "blocks": [
+      "22-11"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "22 Spring stopped",
+    "blocks": [],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "24 unused names",
+    "blocks": [
+      "24-01"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "24 service identity and directories",
+    "blocks": [
+      "24-02",
+      "24-03"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.06,
+    "adaptation": ""
+  },
+  {
+    "name": "24 install release v1",
+    "blocks": [
+      "24-04"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.04,
+    "adaptation": ""
+  },
+  {
+    "name": "24 foreground service identity",
+    "blocks": [
+      "24-05"
+    ],
+    "identity": "eulercheck",
+    "passed": true,
+    "adaptation": "Foreground-equivalent managed subprocess as labapp; stopped before systemd"
+  },
+  {
+    "name": "24 install verify enable start",
+    "blocks": [
+      "24-06",
+      "24-07",
+      "24-08",
+      "24-10"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 1.35,
+    "adaptation": "Unit pins verified JDK21 absolute path; file editing automated"
+  },
+  {
+    "name": "24 service evidence",
+    "blocks": [
+      "24-11"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.08,
+    "adaptation": ""
+  },
+  {
+    "name": "24 compile v2",
+    "blocks": [
+      "24-12"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.43,
+    "adaptation": ""
+  },
+  {
+    "name": "24 install v2",
+    "blocks": [
+      "24-12"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.03,
+    "adaptation": ""
+  },
+  {
+    "name": "24 switch v2",
+    "blocks": [
+      "24-13"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 1.11,
+    "adaptation": ""
+  },
+  {
+    "name": "24 rollback v1",
+    "blocks": [
+      "24-14"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 1.11,
+    "adaptation": ""
+  },
+  {
+    "name": "24 dangling next link guard",
+    "blocks": [],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  },
+  {
+    "name": "24 fault diagnosis and recovery",
+    "blocks": [],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 3.13,
+    "adaptation": "Broken release only in test service; journal evidence captured and v1 restored"
+  },
+  {
+    "name": "23 security and journal",
+    "blocks": [
+      "23-01"
+    ],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.16,
+    "adaptation": ""
+  },
+  {
+    "name": "13 generate client keys",
+    "blocks": [
+      "13-03"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": "Empty key passphrase for isolated automated fixture; no existing key overwritten"
+  },
+  {
+    "name": "13 label test SSH directory",
+    "blocks": [],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "13 public key login",
+    "blocks": [
+      "13-01",
+      "13-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.29,
+    "adaptation": "Actual test endpoint localhost:22 and test username replace illustrative NAT endpoint"
+  },
+  {
+    "name": "13 ssh-copy-id adds second key",
+    "blocks": [
+      "13-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 1,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 0.37,
+    "adaptation": "First fixture key bootstraps login; ssh-copy-id genuinely installs a second test key"
+  },
+  {
+    "name": "13 SCP transfer checksum",
+    "blocks": [
+      "13-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 255,
+    "expected_exit": 0,
+    "passed": false,
+    "seconds": 0.08,
+    "adaptation": "Only transfers test JAR within the isolated user account"
+  },
+  {
+    "name": "13 ssh-copy-id explicit bootstrap key corrected",
+    "blocks": [
+      "13-04"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.56,
+    "adaptation": "Automation uses -f because separate bootstrap IdentityFile causes default duplicate detection to succeed with the bootstrap key; target test key confirmed absent before retry"
+  },
+  {
+    "name": "13 SCP corrected fixture",
+    "blocks": [
+      "13-05"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.2,
+    "adaptation": "Port and user adapted to actual endpoint; exact transferred bytes compared"
+  },
+  {
+    "name": "02 output and type final",
+    "blocks": [
+      "02-01",
+      "02-02"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.01,
+    "adaptation": ""
+  },
+  {
+    "name": "22 package provider final",
+    "blocks": [
+      "22-01"
+    ],
+    "identity": "eulercheck",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 1.5,
+    "adaptation": ""
+  },
+  {
+    "name": "24 final stopped disabled and rollback retained",
+    "blocks": [],
+    "identity": "root",
+    "exit": 0,
+    "expected_exit": 0,
+    "passed": true,
+    "seconds": 0.02,
+    "adaptation": ""
+  }
+]

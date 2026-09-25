@@ -220,7 +220,7 @@
 
 部分 GNU 页面初次直连超时，后续通过官方索引与 /s/ 路径检索。freedesktop HTML 手册取回被拒绝后改读 systemd 官方仓库手册源码。openEuler 的个别猜测路径无法取回，未把它们列成已核对正文。SP4 快速入门旧子页面含其他版本残留，本书使用新版入口并与镜像目录交叉确认，未抄写其过时版本指引。
 
-SP4 镜像目录与文档已确认存在；目标虚拟机 SSH 已到达，但认证尚未完成，未进入系统执行实验。实际包供应、sudo 策略、网络、SELinux 与服务端到端行为均须实测。完整验收表见 review/VALIDATION.md。
+SP4 镜像目录与文档已确认存在；2026-09-24 已完成目标虚拟机运行测试，包含包安装、普通用户权限、脚本、Java、服务部署与回滚。重启恢复、安装器重装和密码交互未验收，具体结果见 review/RUNTIME_REPORT.md 与 review/VALIDATION.md。
 
 
 ## S26 Hello 算法的阅读与练习组织
@@ -258,3 +258,20 @@ SP4 镜像目录与文档已确认存在；目标虚拟机 SSH 已到达，但�
 [OpenSSH 客户端配置](https://man.openbsd.org/ssh_config#ExitOnForwardFailure)
 
 [HTTP 语义 RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html)
+
+
+## S30 Maven 工具链选择与独立镜像配置
+
+对应章节 22。JAVA_HOME 与 PATH 的选择依据 Apache Maven 官方安装说明；镜像匹配与设置文件依据官方镜像指南。阿里云页面只用于说明本次测试所采用镜像的提供者与地址，不作为 Linux 命令语义来源。访问日期为 2026-09-24。
+
+[Maven 安装与 JDK 前提](https://maven.apache.org/install.html)
+
+[Maven 镜像设置](https://maven.apache.org/guides/mini/guide-mirror-settings.html)
+
+[阿里云 Maven 镜像说明](https://developer.aliyun.com/mirror/maven)
+
+## S31 SSH 服务端转发策略
+
+对应章节 13、24。核对 AllowTcpForwarding、Match 与 PermitOpen 的语义。上游默认值不能代替发行版配置；本次 SP4 实机有效值为禁用转发，限定测试用户后才完成隧道验收。
+
+[OpenSSH sshd_config](https://man.openbsd.org/sshd_config#AllowTcpForwarding)

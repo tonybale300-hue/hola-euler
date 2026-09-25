@@ -1,0 +1,4 @@
+from vm_runtime import *
+opts='-o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/home/eulercheck/.ssh/known_hosts'
+t('13 ssh-copy-id explicit bootstrap key corrected',['13-04'],'ssh-copy-id -f -i ~/.ssh/copy-test.pub -p 22 -o IdentityFile=/home/eulercheck/.ssh/linux-lab_ed25519 '+opts+' eulercheck@localhost\n'+'test "$(ssh '+opts+' -p 22 -i ~/.ssh/copy-test eulercheck@localhost id -un)" = eulercheck',note='Automation uses -f because separate bootstrap IdentityFile causes default duplicate detection to succeed with the bootstrap key; target test key confirmed absent before retry')
+t('13 SCP corrected fixture',['13-05'],'scp '+opts+' -P 22 -i ~/.ssh/copy-test ~/linux-lab/java-app/app.jar eulercheck@localhost:uploaded-app.jar\ncmp ~/linux-lab/java-app/app.jar ~/uploaded-app.jar',note='Port and user adapted to actual endpoint; exact transferred bytes compared')

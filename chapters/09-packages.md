@@ -34,7 +34,7 @@ sudo dnf install vim-enhanced
 
 安装需要写系统目录和包数据库，所以使用 sudo。DNF 会给出拟安装、升级或移除的包及空间信息。读过交易摘要后再确认。教程不加 -y，让初学者有一次检查依赖变化的机会。若提示找不到该包，回到 provides 的实际结果，不能换一个网上猜来的包名继续。
 
-> 实机核验｜【待 openEuler 24.03 LTS SP4 实机验证】本书需在目标仓库核对 vim-enhanced、man 文档包、开发工具和 JDK 候选包。包名示例不表示已经在本次环境成功安装。
+> 实机记录｜本次 SP4 x86_64 环境已查询并安装 vim-enhanced、coreutils-help、git、java-21-openjdk-devel 和 maven，保留了交易记录。仓库会更新，读者仍需检查自己看到的版本、依赖和来源。
 
 ### 9.2.2 安装后的证据
 
@@ -45,6 +45,24 @@ rpm -ql vim-enhanced
 ```
 
 rpm -q 中 q 是 query，查询一个已安装包；-ql 继续列出包里的文件。要查询 /usr/bin/vim 由谁提供，可用 rpm -qf /usr/bin/vim，f 对应 file。这能把终端中用到的程序关联回安装记录。
+
+### 9.2.3 手册程序与文档包分开检查
+
+若 man 已安装，man ls 却找不到条目，可以查询谁提供这份文档。
+
+```bash
+dnf provides '*/man1/ls.1*'
+dnf info coreutils-help
+```
+
+本次查询结果指向 coreutils-help。核对交易后安装，再打开手册。
+
+```bash
+sudo dnf install coreutils-help
+man ls
+```
+
+不要仅凭手册缺失就重装 coreutils 主程序。查询、确认提供者、安装、验证的顺序，同样适用于其他缺少的帮助文件。
 
 ## 9.3 更新、移除与来源
 
